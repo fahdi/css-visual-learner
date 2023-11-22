@@ -1,4 +1,4 @@
-function getRandomColor() {
+function getRandomColor(){
   const letters = '0123456789ABCDEF';
   let color = '#';
   for (let i = 0; i < 6; i++) {
@@ -75,7 +75,10 @@ const cssEffects = [
   { // Box 11: Keyframes (Requires additional CSS)
     apply: (element) => {
       element.classList.add('keyframe-example');
-      return '@keyframes example { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }';
+      return '.keyframe-example {\n' +
+        '  animation: spin 1s ease infinite forwards;\n' +
+        '}\n' +
+        '@keyframes spin { from {transform: rotate(0deg);} to {transform: rotate(360deg);} }';
     }
   },
   { // Box 12: Flexbox
@@ -186,21 +189,29 @@ const cssEffects = [
   // ... continue for other boxes
 ];
 
-
-document.addEventListener('mouseover', function(event) {
+document.addEventListener('mouseover', function(event){
   if (event.target.classList.contains('interactive-element')) {
     const index = Array.from(document.querySelectorAll('.interactive-element')).indexOf(event.target);
     if (index >= 0 && index < cssEffects.length) {
       const text = cssEffects[index].apply(event.target);
-      document.getElementById('css-rule-display').innerText = text;
+      document.getElementById('css-rule-display').getElementsByTagName('pre').item(0).innerText = text;
     }
   }
 });
 
-document.addEventListener('mouseout', function(event) {
+document.addEventListener('mouseout', function(event){
   if (event.target.classList.contains('interactive-element')) {
+    // Reset styles
     event.target.style = '';
-    document.getElementById('css-rule-display').innerText = 'Hover over the boxes below to see CSS effects!';
+
+    // Remove all classes except 'interactive-element'
+    for (let className of event.target.classList) {
+      if (className !== 'interactive-element') {
+        event.target.classList.remove(className);
+      }
+    }
+
+    // Reset display text
+    document.getElementById('css-rule-display').getElementsByTagName('pre').item(0).innerText = 'Hover over the boxes below to see CSS effects!';
   }
 });
-
