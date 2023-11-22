@@ -21,4 +21,4 @@ CSS Visual Learner is an interactive tool designed to help both beginners and ad
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/[your-username]/CSS-Visual-Learner.git
+git clone https://github.com/fahdi/css-visual-learner.git
