@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+#css-rule-display {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.interactive-element {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    cursor: pointer;
+}
