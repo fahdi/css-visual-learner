@@ -6,11 +6,19 @@ body {
 }
 
 #css-rule-display {
-    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
     text-align: left;
+    min-height: 100px;
+    position: fixed;
+    top: 10px;
+    scroll-behavior: smooth;
+    width: calc(100% - 50px)
+}
+
+.interactive-elements {
+    margin-top: 120px;
 }
 
 .interactive-element {
