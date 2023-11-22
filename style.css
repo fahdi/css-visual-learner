@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 #css-rule-display {
@@ -12,8 +12,8 @@ body {
 }
 
 .interactive-element {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin: 10px;
     display: inline-block;
     border: 1px solid black;
