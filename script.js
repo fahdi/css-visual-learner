@@ -1,4 +1,4 @@
-function getRandomColor() {
+function getRandomColor(){
   const letters = '0123456789ABCDEF';
   let color = '#';
   for (let i = 0; i < 6; i++) {
@@ -8,7 +8,7 @@ function getRandomColor() {
 }
 
 document.querySelectorAll('.interactive-element').forEach((element, index) => {
-  element.addEventListener('mouseover', function() {
+  element.addEventListener('mouseover', function(){
     switch (index) {
       case 0: // Background Color
         const color = getRandomColor();
@@ -35,7 +35,7 @@ document.querySelectorAll('.interactive-element').forEach((element, index) => {
     }
   });
 
-  element.addEventListener('mouseout', function() {
+  element.addEventListener('mouseout', function(){
     this.style = ''; // Reset all styles on mouseout
     document.getElementById('css-rule-display').innerText = 'Hover over the boxes below to see CSS effects!';
   });
