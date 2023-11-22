@@ -16,8 +16,8 @@ document.querySelectorAll('.interactive-element').forEach((element, index) => {
         document.getElementById('css-rule-display').innerText = `background-color: ${color};`;
         break;
       case 1: // Border Radius
-        this.style.borderRadius = '50%';
-        document.getElementById('css-rule-display').innerText = 'border-radius: 50%;';
+        this.style.borderRadius = '10%';
+        document.getElementById('css-rule-display').innerText = 'border-radius: 10%;';
         break;
       case 2: // Box Shadow
         this.style.boxShadow = '10px 10px 5px grey';
@@ -25,7 +25,7 @@ document.querySelectorAll('.interactive-element').forEach((element, index) => {
         break;
       case 3: // Font Size & Color
         this.style.color = 'blue';
-        this.style.fontSize = '20px';
+        this.style.fontSize = '12px';
         document.getElementById('css-rule-display').innerText = 'color: blue; font-size: 20px;';
         break;
       case 4: // Transform Scale
