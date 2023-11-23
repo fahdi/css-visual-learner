@@ -9,7 +9,7 @@ body {
 #sidebar {
     width: 200px; /* Adjust width as necessary */
     background-color: #f4f4f4;
-    height: 100vh; /* Full height */
+    height: 30vh; /* Full height */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     overflow-x: hidden; /* Disable horizontal scroll */
 }
