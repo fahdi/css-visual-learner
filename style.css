@@ -12,6 +12,8 @@ body {
     height: 100vh; /* Full height */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     overflow-x: hidden; /* Disable horizontal scroll */
+    top:0;
+    
 }
 
 #content {
