@@ -57,3 +57,11 @@
 .flex-column-reverse {
     flex-direction: column-reverse;
 }
+
+
+/*  alignitems css */
+
+#alignItemsVisualizer .flex-container {
+    height: 200px;
+    align-items: flex-start;
+}
