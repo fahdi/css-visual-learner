@@ -121,30 +121,6 @@ ul.selector-visualizer {
     border-radius: 50%;
 }
 
-
-/*Flexbox*/
-
-.flex-container {
-    display: flex;
-    border: 2px solid #000;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.flex-item {
-    border: 1px solid blue;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-}
-
-/* Additional styling for controls */
-.controls {
-    margin-bottom: 10px;
-}
-
-
-
 /* Add responsiveness - smaller screens */
 @media screen and (max-width: 700px) {
     body {
