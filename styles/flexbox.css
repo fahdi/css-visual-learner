@@ -21,9 +21,24 @@
     border-radius: 5px; /* Container border radius */
 }
 
+
+.alignItems {
+   margin: 2em 0;
+}
+
+
 /* Additional styling for controls */
 .controls {
     margin-bottom: 10px;
+}
+
+.controls select {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    outline: none;
+    cursor: pointer;
 }
 
 /* Additional classes for flex-direction values */
