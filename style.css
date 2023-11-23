@@ -62,6 +62,7 @@ body {
     vertical-align: middle;
     line-height: 20px;
     cursor: pointer;
+    transition: 1s ease-in;
 }
 
 @keyframes spin {
@@ -101,6 +102,7 @@ body {
 
 .rules .nth-rule:hover {
     background-color: #e4e4e4;
+    transition: 1s ease-in;
 }
 
 ul.selector-visualizer {
