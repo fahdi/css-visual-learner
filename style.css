@@ -1,10 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     padding: 0;
     margin: 0;
     font-size: 11px;
-    display: flex;
 }
 
 #sidebar {
@@ -78,9 +77,36 @@ body {
     animation: spin 1s ease infinite forwards;
 }
 
-.selector-visualizer ul {
+.columns {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+}
+.column:nth-child(1) {
+    flex: 1;
+    max-width: 110px;
+}
+
+.rules .nth-rule {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+}
+
+.rules .nth-rule:hover {
+    background-color: #e4e4e4;
+}
+
+ul.selector-visualizer {
     list-style-type: none;
     padding: 0;
+    padding-inline-start: 0;
 }
 
 .selector-visualizer li {
@@ -109,8 +135,8 @@ body {
 
     #content {
         width: 100%;
-        margin: 0;
-        padding: 0;
+        margin: 10px;
+        padding: 10px;
     }
 
     .interactive-elements {
