@@ -7,6 +7,7 @@ body {
 }
 
 #sidebar {
+    
     width: 200px; /* Adjust width as necessary */
     background-color: #f4f4f4;
     height: 100vh; /* Full height */
@@ -40,10 +41,11 @@ body {
     padding: 10px;
     border: 1px dashed grey;
     background-color: #f4f4f4;
-    text-align: left;
-    min-height: 100px;
+    text-align: center;
+    min-height: 40px;
     position: fixed;
-    top: 3px;
+    top: 0px;
+    width:100%;
     scroll-behavior: smooth;
     width: calc(100% - 50px)
 }
