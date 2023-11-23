@@ -1,18 +1,50 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 10px;
+    padding: 0;
+    margin: 0;
     font-size: 11px;
+    display: flex;
+}
+
+#sidebar {
+    width: 200px; /* Adjust width as necessary */
+    background-color: #f4f4f4;
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+#content {
+    margin-left: 200px; /* Same as the width of the sidebar */
+    padding: 20px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Change background color of links on hover */
+.nav li a:hover {
+    background-color: #ddd;
 }
 
 #css-rule-display {
     padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
+    border: 1px dashed grey;
+    background-color: #f4f4f4;
     text-align: left;
     min-height: 100px;
     position: fixed;
-    top: 10px;
+    top: 3px;
     scroll-behavior: smooth;
     width: calc(100% - 50px)
 }
@@ -62,17 +94,31 @@ body {
     border-radius: 50%;
 }
 
-/*.selector-visualizer li:nth-child(odd) {*/
-/*    background-color: blue;*/
-/*}*/
 
-/*.selector-visualizer li:nth-child(even) {*/
-/*    background-color: purple;*/
-/*}*/
+/* Add responsiveness - smaller screens */
+@media screen and (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
 
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
 
-.selector-visualizer li:nth-child(2n + 1) {
-    background-color: green;
+    #content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .interactive-elements {
+        margin-top: 200px;
+    }
+
+    #css-rule-display {
+        top: 100px;
+        width: inherit;
+    }
 }
-
-/* Add additional nth-child patterns as needed */
