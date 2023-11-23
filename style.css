@@ -88,7 +88,7 @@ body {
 }
 .column:nth-child(1) {
     flex: 1;
-    max-width: 240px;
+    max-width: 110px;
 }
 
 .rules .nth-rule {
@@ -103,9 +103,10 @@ body {
     background-color: #e4e4e4;
 }
 
-.selector-visualizer ul {
+ul.selector-visualizer {
     list-style-type: none;
     padding: 0;
+    padding-inline-start: 0;
 }
 
 .selector-visualizer li {
