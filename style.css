@@ -40,10 +40,11 @@ body {
     padding: 10px;
     border: 1px dashed grey;
     background-color: #f4f4f4;
-    text-align: left;
-    min-height: 100px;
+    text-align: center;
+    max-height: 100px;
     position: fixed;
-    top: 3px;
+    top: 0px;
+    width:100;
     scroll-behavior: smooth;
     width: calc(100% - 50px)
 }
@@ -75,6 +76,7 @@ body {
 
 .keyframe-example {
     animation: spin 1s ease infinite forwards;
+    transition:1s ease-in;
 }
 
 .columns {
