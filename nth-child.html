@@ -41,8 +41,8 @@
         <input type="text" id="nth-child-input" placeholder="e.g., 2n+1">
     </div>
 
-    <div class="selector-visualizer">
-        <ul>
+    <div>
+        <ul class="selector-visualizer">
             <!-- Dynamically generate or manually place list items here -->
             <li>1</li>
             <li>2</li>
@@ -53,6 +53,37 @@
             <li>7</li>
             <li>8</li>
         </ul>
+    </div>
+
+    <div class="columns">
+        <div class="column rules">
+            <!-- List of nth-child rules -->
+            <div class="nth-rule" data-rule="1">:first-child</div>
+            <div class="nth-rule" data-rule="8">:last-child</div>
+            <div class="nth-rule" data-rule="1">:nth-child(1)</div>
+            <div class="nth-rule" data-rule="2">:nth-child(2)</div>
+            <div class="nth-rule" data-rule="3n">:nth-child(3n)</div>
+            <div class="nth-rule" data-rule="2n">:nth-child(2n)</div>
+            <div class="nth-rule" data-rule="odd">:nth-child(odd)</div>
+            <div class="nth-rule" data-rule="even">:nth-child(even)</div>
+            <div class="nth-rule" data-rule="n+4">:nth-child(n+4)</div>
+            <div class="nth-rule" data-rule="3n-1">:nth-child(3n-1)</div>
+            <div class="nth-rule" data-rule="-n+3">:nth-child(-n+3)</div>
+            <!-- Add more rules as needed -->
+        </div>
+        <div class="column items">
+            <ul class="selector-visualizer">
+                <!-- List items -->
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+            </ul>
+        </div>
     </div>
 </div>
 
