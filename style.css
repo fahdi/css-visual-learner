@@ -45,3 +45,34 @@ body {
 .keyframe-example {
     animation: spin 1s ease infinite forwards;
 }
+
+.selector-visualizer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.selector-visualizer li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+    text-align: center;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/*.selector-visualizer li:nth-child(odd) {*/
+/*    background-color: blue;*/
+/*}*/
+
+/*.selector-visualizer li:nth-child(even) {*/
+/*    background-color: purple;*/
+/*}*/
+
+
+.selector-visualizer li:nth-child(2n + 1) {
+    background-color: green;
+}
+
+/* Add additional nth-child patterns as needed */

@@ -83,10 +83,11 @@ const cssEffects = [
   },
   { // Box 12: Flexbox
     apply: (element) => {
-      element.style.display = 'flex';
-      element.style.justifyContent = 'center';
-      element.style.alignItems = 'center';
-      return 'display: flex; justify-content: center; align-items: center;';
+      // element.style.display = 'flex';
+      // element.style.justifyContent = 'center';
+      // element.style.alignItems = 'center';
+      //return 'display: flex; justify-content: center; align-items: center;';
+      return 'Use the Flexbox Menu to see all flexbox properties';
     }
   },
   { // Box 13: Grid
