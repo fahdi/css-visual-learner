@@ -21,10 +21,6 @@
   border-radius: 5px; /* Container border radius */
 }
 
-.alignItems {
-  margin: 2em 0;
-}
-
 /* Additional styling for controls */
 .controls {
   margin-bottom: 10px;
@@ -58,11 +54,11 @@
 
 /*  alignitems css */
 
-#alignItemsVisualizer {
+.align-items {
   margin-top: 30px;
 }
 
-#alignItemsVisualizer .flex-container {
+.align-items .flex-container {
   height: 8rem;
   align-items: flex-start;
 }
