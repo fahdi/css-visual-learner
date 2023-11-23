@@ -54,11 +54,19 @@
 
 /*  alignitems css */
 
-.align-items {
+.align-items,.justify-content {
   margin-top: 30px;
 }
 
 .align-items .flex-container {
   height: 8rem;
   align-items: flex-start;
+}
+
+
+/* Justify-content css */
+
+.justify-content .flex-container {
+  height: 8rem;
+  justify-content: flex-start;
 }
