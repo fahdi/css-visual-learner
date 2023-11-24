@@ -24,11 +24,17 @@
     margin-bottom: 10px;
 }
 
-.controls input,
+
 .controls select {
+    cursor: pointer;
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
     border: 1px solid #000;
     outline: none;
+}
+
+
+.controls select:active {
+    border: 1px solid blue;
 }
