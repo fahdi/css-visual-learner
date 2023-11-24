@@ -1,4 +1,4 @@
-function getRandomColor() {
+function getRandomColor(){
   const letters = '0123456789ABCDEF';
   let color = '#';
   for (let i = 0; i < 6; i++) {
@@ -7,7 +7,7 @@ function getRandomColor() {
   return color;
 }
 
-function invertColor(hex) {
+function invertColor(hex){
   if (hex.indexOf('#') === 0) {
     hex = hex.slice(1);
   }
@@ -44,13 +44,13 @@ function invertColor(hex) {
   return '#' + padZero(r.toString(16)) + padZero(g.toString(16)) + padZero(b.toString(16));
 }
 
-function padZero(str, len) {
+function padZero(str, len){
   len = len || 2;
   var zeros = new Array(len).join('0');
   return (zeros + str).slice(-len);
 }
 
-function updateNthChildStyles(selector) {
+function updateNthChildStyles(selector){
   try {
     // Reset styles
     document.querySelectorAll('.selector-visualizer li').forEach(li => {
@@ -73,7 +73,7 @@ function updateNthChildStyles(selector) {
 }
 
 // Function to check if the selector is valid
-function isValidSelector(selector) {
+function isValidSelector(selector){
   try {
     document.createDocumentFragment().querySelector(selector);
     return true;
