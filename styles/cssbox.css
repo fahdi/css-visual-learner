@@ -1,0 +1,155 @@
+#content{
+    background: var(--background-color);
+
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 90vh;
+    
+}
+
+
+:root {
+--background-color: rgb(222, 222, 222);
+--content-color: rgba(45, 156, 219, 1);
+--padding-color: rgba(148, 208, 242, 1);
+--border-color: rgba(242, 153, 74, 1);
+--margin-color: rgba(242, 242, 242, 1);
+
+--margin: 30px;
+--border: 5px;
+--padding: 20px;
+--box-sizing: content-box;
+
+--height: 200px;
+--width: 300px;
+}
+
+
+
+
+#form {
+width: 200px;
+padding: 2rem 1rem;
+}
+
+#form > * {
+display: block;
+}
+
+#form label {
+margin-top: 1.8rem;
+margin-bottom: .6rem;
+}
+
+#form input[type=range] {
+width: 100%;
+height: 5px;
+background: darkgray;
+outline: none;
+}
+
+#form input[type=range]::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 15px;
+height: 15px;
+border-radius: 50%; 
+background: black;
+border: 1px solid gray;
+}
+
+#form input[type=range]::-moz-range-thumb {
+appearance: none;
+width: 15px;
+height: 15px;
+border-radius: 50%; 
+background: black;
+border: 1px solid gray;
+}
+
+#form input[name=padding]::-webkit-slider-thumb {
+background: var(--padding-color);
+}
+
+#form input[name=padding]::-moz-range-thumb {
+background: var(--padding-color);
+}
+
+#form input[name=border]::-webkit-slider-thumb {
+background: var(--border-color);
+}
+
+#form input[name=border]::-moz-range-thumb {
+background: var(--border-color);
+}
+
+#form input[name=margin]::-webkit-slider-thumb {
+background: var(--margin-color);
+}
+
+#form input[name=margin]::-moz-range-thumb {
+background: var(--margin-color);
+}
+
+#box-model {
+position: relative;
+min-width: 600px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#wrapper {
+background: var(--margin-color);
+display: inline-block;
+padding: var(--margin); /* the "margin" */
+}
+
+#box {
+box-sizing: var(--box-sizing);
+height: var(--height);
+width: var(--width);
+padding: var(--padding);
+border: solid orange;
+border-width: var(--border);
+}
+
+#box {
+/* method for coloring the padding, as seen at: https://stackoverflow.com/questions/14628601/can-i-add-background-color-only-for-padding*/
+background-image: linear-gradient(var(--content-color), var(--content-color)), 
+linear-gradient(var(--padding-color), var(--padding-color));
+background-clip: content-box, padding-box;
+}
+
+#box-model::before {
+content: "height = 200px";
+color: gray;
+font-weight: 300;
+position: absolute;
+width: var(--height);
+transform: rotate(-90deg);
+text-align: center;
+top: 48%;
+right: -80px;
+border-top: 1px solid gray;
+padding-top: .5rem;
+}
+
+#box-model::after {
+content: "width = 300px";
+color: gray;
+font-weight: 300;
+position: absolute;
+width: var(--width);
+text-align: center;
+bottom: 10px;
+right: 25%;
+border-top: 1px solid gray;
+padding-top: .5rem;
+}
