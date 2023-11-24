@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Visual Learner - Flex - justify-content property</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/flexbox.css">
+</head>
+<body>
+
+<div id="sidebar">
+
+</div>
+<div id="content">
+
+    <div class="visualizer">
+        <!-- Flex-start -->
+        <div class="flex-container-wrapper">
+            <span class="flex-description">flex-start</span>
+            <div class="flex-container flex-start">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </div>
+
+        <!-- Flex-center -->
+        <div class="flex-container-wrapper">
+            <span class="flex-description">flex-center</span>
+            <div class="flex-container flex-center">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </div>
+
+        <!-- Space-between -->
+        <div class="flex-container-wrapper">
+            <span class="flex-description">space-between</span>
+            <div class="flex-container space-between">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </div>
+
+        <!-- Space-around -->
+        <div class="flex-container-wrapper">
+            <span class="flex-description">space-around</span>
+            <div class="flex-container space-around">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </div>
+
+        <!-- Space-evenly -->
+        <div class="flex-container-wrapper">
+            <span class="flex-description">space-evenly</span>
+            <div class="flex-container space-evenly">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+        </div>
+
+        <!-- ... Additional flex containers for other justify-content values -->
+    </div>
+
+
+    <!-- Controls -->
+    <div class="controls">
+        <label for="container-width">Container Width:</label>
+        <input type="range" id="container-width" min="100" max="1000" value="600">
+        <button id="animate-width">Animate Width</button>
+    </div>
+</div>
+
+<script src="./scripts/main.js"></script>
+<script src="./scripts/flexbox.js"></script>
+</body>
+</html>
