@@ -54,7 +54,7 @@
 
 /*  alignitems css */
 
-.align-items, .justify-content {
+.align-items, .justify-content, .align-content {
     margin-top: 30px;
 }
 
@@ -69,4 +69,21 @@
 .justify-content .flex-container {
     height: 8rem;
     justify-content: flex-start;
+}
+
+ /* align-content  */
+.align-content .flex-container {
+  align-content: flex-start;
+  flex-wrap: wrap;
+  min-height: 8rem;
+}
+
+.align-content .flex-item {
+  width: 100px;
+  margin: 5px;
+}
+
+.align-content-warning{
+  margin-top: 10px; 
+  font-size: .9rem;
 }
