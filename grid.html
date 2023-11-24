@@ -8,59 +8,52 @@
     <link rel="stylesheet" href="./styles/grid.css">
 </head>
 <body>
-   
+
 <div id="sidebar">
-    <nav class="nav">
-        <ul>
-            <li><a href="color.html">Color</a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="nth-child.html">Nth-Child Visualizer</a></li>
-            <li><a href="flex-box.html">Flexbox</a></li>
-            <li><a href="grid.html">Grid</a></li>
-            <li><a href="css-box.html">CSS Box Model</a></li>
-            <!-- Add additional links to other visualizers here -->
-        </ul>
-    </nav>
+
 </div>
+
 <div id="content">
 
     <!-- Grid visualizer -->
     <div id="gridVisualizer">
-      <div class="controls">
-        <label for="gridTemplateColumns">Grid Template Columns:</label>
-        <input type="text" id="gridTemplateColumns" placeholder="e.g., 100px 100px 100px">
-      </div>
-
-      <div class="controls">
-        <label for="gridTemplateRows">Grid Template Rows:</label>
-        <input type="text" id="gridTemplateRows" placeholder="e.g., 100px 100px">
-      </div>
-
-      <div class="controls">
-        <label for="gridColumnGap">Grid Column Gap:</label>
-        <input type="text" id="gridColumnGap" placeholder="e.g., 5px">
-      </div>
-
-      <div class="controls">
-        <label for="gridRowGap">Grid Row Gap:</label>
-        <input type="text" id="gridRowGap" placeholder="e.g., 5px">
-      </div>
-
-      <div id="gridItemsVisualizer" class="grid-items">
-        <div class="grid-container">
-          <div class="grid-item">1</div>
-          <div class="grid-item">2</div>
-          <div class="grid-item">3</div>
-          <div class="grid-item">4</div>
-          <!-- More grid items as needed -->
+        <div class="controls">
+            <label for="gridTemplateColumns">Grid Template Columns:</label>
+            <input type="text" id="gridTemplateColumns" placeholder="e.g., 100px 100px 100px">
         </div>
-      </div>
-    </div>
-    
-        <p style="background-color: red; font-size: 1.5rem;font-weight: bold; width: 45vw; margin: auto; text-align: center; color: white; margin-top: 10px; border-radius: 10px;padding: 5px;">Please add 'px' to values</p>
-    
-  </div>
 
-  <script src="./scripts/grid.js" ></script>
+        <div class="controls">
+            <label for="gridTemplateRows">Grid Template Rows:</label>
+            <input type="text" id="gridTemplateRows" placeholder="e.g., 100px 100px">
+        </div>
+
+        <div class="controls">
+            <label for="gridColumnGap">Grid Column Gap:</label>
+            <input type="text" id="gridColumnGap" placeholder="e.g., 5px">
+        </div>
+
+        <div class="controls">
+            <label for="gridRowGap">Grid Row Gap:</label>
+            <input type="text" id="gridRowGap" placeholder="e.g., 5px">
+        </div>
+
+        <div id="gridItemsVisualizer" class="grid-items">
+            <div class="grid-container">
+                <div class="grid-item">1</div>
+                <div class="grid-item">2</div>
+                <div class="grid-item">3</div>
+                <div class="grid-item">4</div>
+                <!-- More grid items as needed -->
+            </div>
+        </div>
+    </div>
+
+    <p style="background-color: red; font-size: 1.5rem;font-weight: bold; width: 45vw; margin: auto; text-align: center; color: white; margin-top: 10px; border-radius: 10px;padding: 5px;">
+        Please add 'px' to values</p>
+
+</div>
+
+<script src="./scripts/main.js"></script>
+<script src="./scripts/grid.js"></script>
 </body>
 </html>
