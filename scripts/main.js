@@ -5,7 +5,7 @@ function loadSidebar(){
       document.getElementById('sidebar').innerHTML = this.responseText;
     }
   };
-  xhr.open('GET', '/sidebar.html', true);
+  xhr.open('GET', '../sidebar.html', true);
   xhr.send();
 }
 
