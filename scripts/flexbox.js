@@ -54,4 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-// Add similar event listeners for other Flexbox properties
+  // Event listener for the animate button
+  animateButton.addEventListener('click', animateWidth);
+});
