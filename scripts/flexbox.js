@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
       ).style.justifyContent = e.target.value;
     });
 
+    document
+    .getElementById('alignContent')
+    .addEventListener('change', (e) => {
+      document.querySelector('#alignContentVisualizer .flex-container'
+      ).style.alignContent = e.target.value;
+    })
+
 });
 
 // Add similar event listeners for other Flexbox properties
