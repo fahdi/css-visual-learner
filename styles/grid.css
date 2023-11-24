@@ -8,28 +8,27 @@
     background-color: #222; /* Container background */
     color: white; /* Container text color */
     border-radius: 10px; /* Container border radius */
-  }
-  
-  .grid-item {
+}
+
+.grid-item {
     padding: 10px;
     font-size: 1.1rem;
     text-align: center;
     background-color: #00d2ff; /* Item background */
     color: black; /* Item text color */
     border-radius: 5px; /* Container border radius */
-  }
-  
-  /* Additional styling for controls */
-  .controls {
+}
+
+/* Additional styling for controls */
+.controls {
     margin-bottom: 10px;
-  }
-  
-  .controls input,
-  .controls select {
+}
+
+.controls input,
+.controls select {
     padding: 5px;
     margin: 5px;
     border-radius: 5px;
     border: 1px solid #000;
     outline: none;
-  }
-  
+}
