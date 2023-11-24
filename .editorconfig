@@ -19,5 +19,7 @@ tab_width = 2
 [*.html]
 indent_size = 4 # or your preferred indent size
 indent_style = space  # or your preferred indent style (space or tab)
-max_line_length = 120
 
+[*.css]
+indent_size = 4  # or your preferred indent size
+indent_style = space  # or your preferred indent style (space or tab)
