@@ -52,32 +52,22 @@
     flex-direction: column-reverse;
 }
 
-<<<<<<< HEAD
+
 .align-items,.justify-content, .align-content {
   margin-top: 30px;
-=======
-/*  alignitems css */
-
-.align-items, .justify-content {
-    margin-top: 30px;
->>>>>>> acb0400434f973e94329f35257da8ece674f4597
 }
 
 
 /*  align-items css */
 .align-items .flex-container {
-<<<<<<< HEAD
-  align-items: flex-start;
-  height: 8rem;
-=======
     height: 8rem;
     align-items: flex-start;
->>>>>>> acb0400434f973e94329f35257da8ece674f4597
+
 }
 
 /* Justify-content css */
 .justify-content .flex-container {
-<<<<<<< HEAD
+
   justify-content: flex-start;
   height: 8rem;
 }
@@ -97,8 +87,4 @@
 .align-content-warning{
   margin-top: 10px; 
   font-size: .9rem;
-=======
-    height: 8rem;
-    justify-content: flex-start;
->>>>>>> acb0400434f973e94329f35257da8ece674f4597
 }
