@@ -166,7 +166,6 @@ ul.selector-visualizer {
     #css-rule-display {
         top: 90px;
         width: 100%;
-        position: fixed;
         top: 0;
         left: 200px;
         text-align: left;
