@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
       ).style.justifyContent = e.target.value;
     });
 
+    document
+    .getElementById('alignContent')
+    .addEventListener('change', (e) => {
+      document.querySelector('#alignContentVisualizer .flex-container'
+      ).style.alignContent = e.target.value;
+    })
+
   // Get the range input and animate button
   const rangeInput = document.getElementById('container-width');
   const animateButton = document.getElementById('animate-width');
@@ -47,6 +54,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Event listener for the animate button
-  animateButton.addEventListener('click', animateWidth);
-});
+// Add similar event listeners for other Flexbox properties
