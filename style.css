@@ -12,6 +12,7 @@ body {
     height: 100vh; /* Full height */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     overflow-x: hidden; /* Disable horizontal scroll */
+    text-align: center;
 }
 
 #content {
@@ -34,19 +35,22 @@ body {
 /* Change background color of links on hover */
 .nav li a:hover {
     background-color: #ddd;
+    transition: 1s ease-in;
 }
 
 #css-rule-display {
     padding: 10px;
     border: 1px dashed grey;
     background-color: #f4f4f4;
-    text-align: left;
-    min-height: 100px;
+    text-align: center;
+    max-height: 70px;
     position: fixed;
-    top: 3px;
+    top: 0px;
     scroll-behavior: smooth;
-    width: calc(100% - 50px)
+    width: calc(100% - 50px);
+    cursor: pointer;
 }
+
 
 .interactive-elements {
     margin-top: 120px;
@@ -59,14 +63,30 @@ body {
     display: inline-block;
     border: 1px solid black;
     text-align: center;
+    top: 50%;
+    translate: (-50%, -50%);
+    transition: 1s ease-in-out;
     vertical-align: middle;
     line-height: 20px;
     cursor: pointer;
 }
 
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(90deg);
+    }
+    40%{
+        transform: rotate(180deg);
+    }
+    60%{
+        transform: rotate(270deg);
+    }
+    80%{
+        transform: rotate(270deg);
     }
     100% {
         transform: rotate(360deg);
@@ -74,7 +94,7 @@ body {
 }
 
 .keyframe-example {
-    animation: spin 1s ease infinite forwards;
+    animation: spin 2.5s ease infinite forwards;
 }
 
 .columns {
@@ -144,7 +164,13 @@ ul.selector-visualizer {
     }
 
     #css-rule-display {
-        top: 100px;
-        width: inherit;
+        top: 90px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 200px;
+        text-align: left;
+        margin-left: -60px;
+        border: none;
     }
 }
