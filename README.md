@@ -1,13 +1,14 @@
 # CSS Visual Learner
 
-CSS Visual Learner is an interactive tool designed to help both beginners and advanced users understand the impact of various CSS properties in real-time. By hovering over elements, users can instantly see how different CSS rules affect the layout and design of web components.
+CSS Visual Learner is an interactive learning tool designed to help both beginners and advanced users understand the impact of various CSS properties in real-time. This tool provides a hands-on approach for experimenting with CSS, making it easier to see how changes in CSS affect web layouts and designs.
 
 ## Features
 
-- **Live CSS Rule Application:** See how CSS rules change the appearance of elements on hover.
-- **Interactive Learning:** Hands-on approach for experimenting with different CSS properties.
-- **User-Friendly Interface:** Easy to use for beginners yet powerful for advanced users.
-- **Expandable:** Add your own CSS rules to test and learn.
+- **Live CSS Rule Application:** Instantly see how different CSS rules change the appearance of elements.
+- **Interactive Visualizers:** Explore various CSS properties like Flexbox, Grid, and the Box Model through interactive examples.
+- **Responsive Design:** A mobile-friendly interface that adapts to different screen sizes for a seamless learning experience on any device.
+- **Real-Time Feedback:** See immediate changes and effects as you interact with the visualizers.
+- **Extendable Platform:** Easily add more visualizers or modify existing ones thanks to a modular and scalable code structure.
 
 ## Getting Started
 
@@ -28,9 +29,9 @@ Open `index.html` in your browser to start using the tool.
 
 ## How to Use
 
-1. Hover over the boxes to see the CSS effects.
-2. Modify the CSS rules in the provided editor (coming soon) or select from predefined rules.
-3. See the changes applied in real-time as you interact with the elements.
+1. Explore different CSS properties using the interactive visualizers.
+2. Use the responsive sidebar for easy navigation between different CSS concepts.
+3. Modify the CSS rules directly or use the controls provided in the visualizers to see the changes applied in real-time.
 
 ## Contributing
 
@@ -51,3 +52,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Fahdi - [info@fahdmurtaza.com](mailto:info@fahdmurtaza.com)
 
 Project Link: [https://github.com/fahdi/css-visual-learner](https://github.com/fahdi/css-visual-learner)
+
