@@ -186,7 +186,7 @@ ul.selector-visualizer {
 @media (max-width: 768px) {
     .main-sidebar {
         width: 100%;
-        height: auto;
+        height: 100vh;
         position: relative;
         border-right: none;
         border-bottom: 1px solid #ddd;
