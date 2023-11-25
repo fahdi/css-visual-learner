@@ -6,6 +6,11 @@ body {
     font-size: 14px;
 }
 
+#sidebar {
+    width: 250px;
+    height: 20px;
+}
+
 #content {
     margin:  10px 270px 10px 270px;
     padding: 20px;
@@ -34,14 +39,13 @@ body {
     background-color: #f4f4f4;
     text-align: left;
     min-height: 100px;
-    position: fixed;
-    top: 3px;
+    position: relative;
     scroll-behavior: smooth;
     width: calc(100% - 50px)
 }
 
 .interactive-elements {
-    margin-top: 120px;
+    margin-top: 20px;
 }
 
 .interactive-element {
@@ -119,6 +123,11 @@ ul.selector-visualizer {
         flex-direction: column;
     }
 
+    #sidebar {
+        width: 100%;
+        height: 20px;
+    }
+
     #content {
         width: 100%;
         margin: 10px;
@@ -126,11 +135,10 @@ ul.selector-visualizer {
     }
 
     .interactive-elements {
-        margin-top: 200px;
+        margin-top: 20px;
     }
 
     #css-rule-display {
-        top: 100px;
         width: inherit;
     }
 }
@@ -178,7 +186,7 @@ ul.selector-visualizer {
 @media (max-width: 768px) {
     .main-sidebar {
         width: 100%;
-        height: auto;
+        height: 100vh;
         position: relative;
         border-right: none;
         border-bottom: 1px solid #ddd;
@@ -192,6 +200,9 @@ ul.selector-visualizer {
     border-radius: 3px;
     border: 1px solid #ddd;
     margin: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .hamburger-menu span {
@@ -237,4 +248,8 @@ ul.selector-visualizer {
 /* Optional: Style the button on hover */
 .close-btn:hover {
     color: #666;
+}
+
+header {
+    margin-top: 30px;
 }

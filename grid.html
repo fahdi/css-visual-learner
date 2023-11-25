@@ -9,6 +9,21 @@
 </head>
 <body>
 
+<header style="text-align: center">
+    <button class="hamburger-menu" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="#FFF"/>
+        <text x="4" y="27" font-family="Arial" font-size="25" fill="#333">{ &nbsp; &nbsp;}</text>
+        <text x="14" y="25" font-family="Arial" font-size="12" font-weight="700" fill="#333">CSS</text>
+        <text x="52" y="25" font-family="Arial" font-size="10" font-weight="500" fill="#333">VISUAL LEARNER</text>
+    </svg>
+</header>
+
 <div id="sidebar">
 
 </div>
@@ -20,7 +35,7 @@
       <div class="controls">
         <label for="gridTemplateColumns">Grid Template Columns:</label>
         <select id="gridTemplateColumns">
-          <option value="" hidden selected hidden >Select a value</option>
+          <option value="" hidden selected>Select a value</option>
           <option value="100px 100px 100px">100px 100px 100px</option>
           <option value="1fr 2fr 1fr">1fr 2fr 1fr</option>
           <option value="repeat(3, 100px)">repeat(3, 100px)</option>
@@ -34,7 +49,7 @@
       <div class="controls">
         <label for="gridTemplateRows">Grid Template Rows:</label>
         <select id="gridTemplateRows">
-          <option value="" hidden selected hidden >Select a value</option>
+          <option value="" hidden selected>Select a value</option>
           <option value="100px 100px">100px 100px</option>
           <option value="1fr 2fr">1fr 2fr</option>
           <option value="repeat(2, 100px)">repeat(2, 100px)</option>
@@ -48,7 +63,7 @@
       <div class="controls">
         <label for="gridColumnGap">Grid Column Gap:</label>
         <select id="gridColumnGap">
-          <option value="" hidden selected hidden >Select a value</option>
+          <option value="" hidden selected>Select a value</option>
           <option value="5px">5px</option>
           <option value="10px">10px</option>
           <option value="15px">15px</option>

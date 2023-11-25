@@ -10,8 +10,6 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 90vh;
-
 }
 
 :root {
@@ -141,7 +139,7 @@
 
 #box-model::after {
     content: "width = 300px";
-    color: #AAAAAA;
+    color: #aaaaaa;
     font-weight: 300;
     position: absolute;
     width: var(--width);
