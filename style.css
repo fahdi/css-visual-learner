@@ -3,11 +3,11 @@ body {
     text-align: left;
     padding: 0;
     margin: 0;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 #content {
-    margin-left: 250px; /* Same as the width of the sidebar */
+    margin:  10px 270px 10px 270px;
     padding: 20px;
 }
 
@@ -117,12 +117,6 @@ ul.selector-visualizer {
 @media screen and (max-width: 700px) {
     body {
         flex-direction: column;
-    }
-
-    #sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
     }
 
     #content {
