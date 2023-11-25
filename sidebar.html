@@ -1,11 +1,27 @@
-<nav class="nav">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="color.html">Color</a></li>
-        <li><a href="nth-child.html">Nth-Child Visualizer</a></li>
-        <li><a href="flex-box.html">Flexbox</a></li>
-        <li><a href="grid.html">Grid</a></li>
-        <li><a href="css-box.html">CSS Box Model</a></li>
-        <!-- Add additional links to other visualizers here -->
-    </ul>
-</nav>
+<button class="hamburger-menu" onclick="toggleSidebar()">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="main-sidebar" id="main-sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+    <div class="sidebar-header">
+    </div>
+    <nav class="sidebar-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="color.html">Color</a></li>
+            <li><a href="nth-child.html">Nth-Child Visualizer</a></li>
+            <li><a href="flex-box.html">Flexbox</a></li>
+            <ul>
+                <li><a href="flex-justify-content.html">Justify Content</a></li>
+            </ul>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="grid-extended.html">Grid - Extended</a></li>
+            <li><a href="css-box.html">CSS Box Model</a></li>
+
+            <!-- Add additional links to other visualizers here -->
+        </ul>
+    </nav>
+</div>

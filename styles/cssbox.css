@@ -15,7 +15,7 @@
 }
 
 :root {
-    --background-color: rgb(222, 222, 222);
+    --background-color: rgb(255, 255, 255);
     --content-color: rgba(45, 156, 219, 1);
     --padding-color: rgba(148, 208, 242, 1);
     --border-color: rgba(242, 153, 74, 1);
@@ -141,13 +141,13 @@
 
 #box-model::after {
     content: "width = 300px";
-    color: gray;
+    color: #AAAAAA;
     font-weight: 300;
     position: absolute;
     width: var(--width);
     text-align: center;
     bottom: 10px;
     right: 25%;
-    border-top: 1px solid gray;
+    border-top: 1px solid #AAAAAA;
     padding-top: .5rem;
 }

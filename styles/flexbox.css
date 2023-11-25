@@ -1,5 +1,9 @@
 /*Flexbox*/
 
+.flex-container-wrapper {
+    margin-bottom: 20px; /* Space between each set */
+}
+
 .flex-container {
     display: flex;
     border: 2px solid #000;
@@ -8,6 +12,13 @@
     background-color: #222; /* Container background */
     color: white; /* Container text color */
     border-radius: 10px; /* Container border radius */
+}
+
+.flex-description {
+    display: block; /* Make the span behave like a div */
+    margin-bottom: 5px; /* Space between label and container */
+    font-weight: bold;
+    color: #333; /* Text color for the description */
 }
 
 .flex-item {
@@ -83,7 +94,68 @@
   margin: 5px;
 }
 
+
 .align-content-warning{
-  margin-top: 10px; 
+  margin-top: 10px;
   font-size: .9rem;
 }
+
+/*.flex-container {*/
+/*    display: flex;*/
+/*    !* Default styles for your flex containers *!*/
+/*    width: 100%; !* Default width, which you can animate or adjust *!*/
+/*    min-height: 50px; !* Minimum height for visibility *!*/
+/*    margin-bottom: 10px; !* Space between each row *!*/
+/*    border: 1px solid #ccc; !* Border to show container boundaries *!*/
+/*    align-items: center; !* Align items vertically in the center *!*/
+/*    transition: width 1s ease-in-out; !* Smooth transition for width changes *!*/
+/*    background-color: #f7f7f7; !* Background color for visibility *!*/
+/*}*/
+
+/* Class for animating the width of the flex containers */
+.animate-width {
+    animation: pulsateWidth 2s infinite;
+}
+
+@keyframes pulsateWidth {
+    0%, 100% { width: 100%; }
+    50% { width: 30%; }
+}
+
+/* justify-content classes */
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-center {
+    justify-content: center;
+}
+.flex-end {
+    justify-content: flex-end;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.stretch {
+    align-items: stretch;
+}
+
+/*!* Flex items styling *!*/
+/*.flex-item {*/
+/*    padding: 10px;*/
+/*    margin: 0 5px; !* Spacing between flex items *!*/
+/*    background-color: #007bff; !* Background color for items *!*/
+/*    color: white; !* Text color for items *!*/
+/*    border-radius: 4px; !* Rounded corners for items *!*/
+/*    border: 1px solid #0056b3; !* Border for items *!*/
+/*}*/

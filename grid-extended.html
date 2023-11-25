@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Visual Learner - Extended Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/grid-extended.css">
+</head>
+<body>
+
+<div id="sidebar">
+
+</div>
+
+<div id="content">
+
+    <!-- Grid visualizer -->
+    <div id="gridVisualizer">
+        <div class="grid-controls">
+            <!-- Controls for grid-template-columns -->
+            <label for="gridColumnsControl">Columns:</label>
+            <select id="gridColumnsControl">
+                <option value="1fr 1fr 1fr">3 equal columns</option>
+                <option value="2fr 1fr 1fr">2:1:1 ratio</option>
+                <option value="repeat(4, 1fr)">4 equal columns</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <!-- Controls for grid-template-rows -->
+            <label for="gridRowsControl">Rows:</label>
+            <select id="gridRowsControl">
+                <option value="1fr 1fr 1fr">3 equal rows</option>
+                <option value="2fr 1fr">2:1 ratio</option>
+                <option value="auto auto auto">Auto-sized rows</option>
+                <!-- Add more options as needed -->
+            </select>
+
+            <!-- Controls for gap -->
+            <label for="gridGapControl">Gap:</label>
+            <input type="range" id="gridGapControl" min="0" max="50" value="10">
+        </div>
+
+        <div class="grid-container">
+            <!-- Grid items will be added dynamically via JavaScript -->
+        </div>
+    </div>
+
+</div>
+
+<script src="./scripts/main.js"></script>
+<script src="./scripts/grid-extended.js"></script>
+</body>
+</html>

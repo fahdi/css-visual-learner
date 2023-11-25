@@ -1,0 +1,61 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the Grid Visualizer */
+#gridVisualizer {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the controls section */
+.grid-controls {
+    margin-bottom: 20px;
+}
+
+/* Styles for labels and dropdowns */
+.grid-controls label {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+}
+
+.grid-controls select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+/* Style to change the appearance of the select arrow */
+.grid-controls select {
+    -webkit-appearance: none; /* Remove default arrow in WebKit browser */
+}
+
+.grid-container { /* Container for the grid */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Start with a simple 3x3 grid */
+    gap: 10px; /* Spacing between grid items */
+    padding: 10px; /* Padding around the grid */
+    border: 2px solid #333; /* Border for visibility */
+}
+
+.grid-item {
+    background: #007bff; /* Initial color for grid items */
+    border: 1px solid #fff; /* Spacing between items */
+    height: 50px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}

@@ -17,40 +17,73 @@
 
     <!-- Grid visualizer -->
     <div id="gridVisualizer">
-        <div class="controls">
-            <label for="gridTemplateColumns">Grid Template Columns:</label>
-            <input type="text" id="gridTemplateColumns" placeholder="e.g., 100px 100px 100px">
-        </div>
+      <div class="controls">
+        <label for="gridTemplateColumns">Grid Template Columns:</label>
+        <select id="gridTemplateColumns">
+          <option value="" hidden selected hidden >Select a value</option>
+          <option value="100px 100px 100px">100px 100px 100px</option>
+          <option value="1fr 2fr 1fr">1fr 2fr 1fr</option>
+          <option value="repeat(3, 100px)">repeat(3, 100px)</option>
+          <option value="auto auto auto">auto auto auto</option>
+          <option value="1fr 1fr 2fr">1fr 1fr 2fr</option>
+          <option value="150px 200px 150px">150px 200px 150px</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
 
-        <div class="controls">
-            <label for="gridTemplateRows">Grid Template Rows:</label>
-            <input type="text" id="gridTemplateRows" placeholder="e.g., 100px 100px">
-        </div>
+      <div class="controls">
+        <label for="gridTemplateRows">Grid Template Rows:</label>
+        <select id="gridTemplateRows">
+          <option value="" hidden selected hidden >Select a value</option>
+          <option value="100px 100px">100px 100px</option>
+          <option value="1fr 2fr">1fr 2fr</option>
+          <option value="repeat(2, 100px)">repeat(2, 100px)</option>
+          <option value="auto auto">auto auto</option>
+          <option value="2fr 1fr">2fr 1fr</option>
+          <option value="200px 150px">200px 150px</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
 
-        <div class="controls">
-            <label for="gridColumnGap">Grid Column Gap:</label>
-            <input type="text" id="gridColumnGap" placeholder="e.g., 5px">
-        </div>
+      <div class="controls">
+        <label for="gridColumnGap">Grid Column Gap:</label>
+        <select id="gridColumnGap">
+          <option value="" hidden selected hidden >Select a value</option>
+          <option value="5px">5px</option>
+          <option value="10px">10px</option>
+          <option value="15px">15px</option>
+          <option value="20px">20px</option>
+          <option value="25px">25px</option>
+          <option value="30px">30px</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
 
-        <div class="controls">
-            <label for="gridRowGap">Grid Row Gap:</label>
-            <input type="text" id="gridRowGap" placeholder="e.g., 5px">
-        </div>
+      <div class="controls">
+        <label for="gridRowGap">Grid Row Gap:</label>
+        <select id="gridRowGap">
+          <option value="" hidden selected hidden >Select a value</option>
+          <option value="5px">5px</option>
+          <option value="10px">10px</option>
+          <option value="15px">15px</option>
+          <option value="20px">20px</option>
+          <option value="25px">25px</option>
+          <option value="30px">30px</option>
+          <!-- Add more options as needed -->
+        </select>
+      </div>
 
-        <div id="gridItemsVisualizer" class="grid-items">
-            <div class="grid-container">
-                <div class="grid-item">1</div>
-                <div class="grid-item">2</div>
-                <div class="grid-item">3</div>
-                <div class="grid-item">4</div>
-                <!-- More grid items as needed -->
-            </div>
+      <div id="gridItemsVisualizer" class="grid-items">
+        <div class="grid-container">
+          <div class="grid-item">1</div>
+          <div class="grid-item">2</div>
+          <div class="grid-item">3</div>
+          <div class="grid-item">4</div>
+          <!-- More grid items as needed -->
         </div>
+      </div>
     </div>
-
-    <p style="background-color: red; font-size: 1.5rem;font-weight: bold; width: 45vw; margin: auto; text-align: center; color: white; margin-top: 10px; border-radius: 10px;padding: 5px;">
-        Please add 'px' to values</p>
-
+</div>
 </div>
 
 <script src="./scripts/main.js"></script>
