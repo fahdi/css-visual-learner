@@ -65,5 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Event listener for the animate button
     animateButton.addEventListener('click', animateWidth);
   }
+  const stopAnimationButton = document.getElementById('stop-animate-width');
+  // Event listener for the stop animation button
+  if (stopAnimationButton) {
+    stopAnimationButton.addEventListener('click', () => {
+      document.querySelectorAll('.flex-container').forEach(container => {
+        container.classList.remove('animate-width');
+
+      });
+    });
+  }
 
 });
