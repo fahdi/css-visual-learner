@@ -1,0 +1,45 @@
+/* Basic styling for the playground area */
+#selector-playground {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Styling for both editors and live preview */
+.editor, #live-preview {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    height: 300px; /* Adjust height as needed */
+    overflow: auto; /* Enables scrolling if content overflows */
+}
+
+/* Specific styling for HTML and CSS editors */
+#html-editor {
+    background-color: #f9f9f9;
+}
+
+#css-editor {
+    background-color: #f0f0f0;
+}
+
+/* Styling for the live preview area */
+#live-preview {
+    background-color: #fff;
+    grid-column: span 2; /* Preview spans both columns */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #selector-playground {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    #live-preview {
+        grid-column: span 1; /* Adjusts preview to single column on smaller screens */
+    }
+}
+/* Path: styles/selector-playground.css */

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Visual Learner - CSS Selector Playground</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/selector-playground.css">
+    <!-- In your HTML head, add the following lines -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script> <!-- For HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script> <!-- For CSS -->
+    <script src="scripts/selector-playground.js"></script> <!-- Link to your JS file for this feature -->
+
+    <!-- Standard Meta Tags -->
+    <meta name="description" content="Interactive tool to learn CSS with real-time visual feedback on hover.">
+    <meta name="keywords" content="CSS, Web Design, Learning Tool, CSS Visualizer">
+    <meta name="author" content="Fahdi">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://github.com/fahdi/css-visual-learner">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CSS Visual Learner">
+    <meta property="og:description" content="Interactive tool to learn CSS with real-time visual feedback.">
+    <meta property="og:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS Visual Learner">
+    <meta name="twitter:description" content="Interactive tool to learn CSS with real-time visual feedback.">
+    <meta name="twitter:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
+    <meta name="twitter:creator" content="@fahdi">
+    <style>
+    </style>
+</head>
+<body>
+
+<header style="text-align: center">
+    <button class="hamburger-menu" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="#FFF"/>
+        <text x="4" y="27" font-family="Arial" font-size="25" fill="#333">{ &nbsp; &nbsp;}</text>
+        <text x="14" y="25" font-family="Arial" font-size="12" font-weight="700" fill="#333">CSS</text>
+        <text x="52" y="25" font-family="Arial" font-size="10" font-weight="500" fill="#333">VISUAL LEARNER</text>
+    </svg>
+</header>
+
+<div id="sidebar">
+
+</div>
+
+<div id="content">
+    <div id="selector-playground">
+        <textarea id="html-editor" class="editor"></textarea>
+        <textarea id="css-editor" class="editor"></textarea>
+        <div id="live-preview">Live Preview</div>
+    </div>
+</div>
+
+<script src="scripts/main.js"></script>
+<script src="scripts/index.js"></script>
+</body>
+</html>
+
