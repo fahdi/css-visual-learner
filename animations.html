@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Visual Learner - Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/animations.css">
+</head>
+<body>
+
+<header style="text-align: center">
+    <button class="hamburger-menu" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="#FFF"/>
+        <text x="4" y="27" font-family="Arial" font-size="25" fill="#333">{ &nbsp; &nbsp;}</text>
+        <text x="14" y="25" font-family="Arial" font-size="12" font-weight="700" fill="#333">CSS</text>
+        <text x="52" y="25" font-family="Arial" font-size="10" font-weight="500" fill="#333">VISUAL LEARNER</text>
+    </svg>
+</header>
+
+<div id="sidebar">
+
+</div>
+
+<div id="content">
+
+    <div class="container">
+        <h1>CSS Animations and Transitions Interactive Example</h1>
+        <div class="animation-box">
+            <!-- Animation will be displayed here -->
+        </div>
+        <div class="controls">
+            <label for="animation-name">Animation:</label>
+            <select id="animation-name">
+                <option value="none">None</option>
+                <option value="bounce" selected>Bounce</option>
+                <option value="shake">Shake</option>
+                <option value="fade-in">Fade In</option>
+                <option value="slide-in-left">Slide In Left</option>
+                <option value="slide-in-right">Slide In Right</option>
+                <option value="zoom-in">Zoom In</option>
+                <option value="spin">Spin</option>
+                <option value="flip-horizontal">Flip Horizontal</option>
+                <option value="flip-vertical">Flip Vertical</option>
+                <option value="expand">Expand</option>
+                <option value="contract">Contract</option>
+                <option value="rotate-right">Rotate Right</option>
+                <option value="rotate-left">Rotate Left</option>
+                <option value="pulse">Pulse</option>
+                <option value="flash">Flash</option>
+                <option value="wiggle">Wiggle</option>
+                <option value="blink">Blink</option>
+                <option value="grow-shrink">Grow and Shrink</option>
+                <option value="slide-up">Slide Up</option>
+                <option value="slide-down">Slide Down</option>
+                <option value="tilt-left">Tilt Left</option>
+                <option value="tilt-right">Tilt Right</option>
+                <option value="sway">Sway</option>
+                <option value="hover-lift">Hover Lift</option>
+                <option value="color-change">Color Change</option>
+                <option value="border-dance">Border Dance</option>
+                <option value="rotate-x">Rotate X</option>
+                <option value="rotate-y">Rotate Y</option>
+                <option value="pop-in">Pop In</option>
+                <option value="fade-out">Fade Out</option>
+                <option value="skew">Skew</option>
+                <option value="ripple">Ripple</option>
+                <!-- More animations can be added here -->
+            </select>
+
+            <label for="duration">Duration (seconds):</label>
+            <input type="number" id="duration" min="0" step="0.1" value="1"> <!-- Default 1s -->
+
+            <label for="timing-function">Timing Function:</label>
+            <select id="timing-function">
+                <option value="linear">linear</option>
+                <option value="ease" selected>ease</option>
+                <option value="ease-in">ease-in</option>
+                <option value="ease-out">ease-out</option>
+                <option value="ease-in-out">ease-in-out</option>
+            </select>
+
+            <label for="delay">Delay (seconds):</label>
+            <input type="number" id="delay" min="0" step="0.1" value="0"> <!-- Default 0s -->
+
+            <label for="iteration-count">Iteration Count:</label>
+            <input type="number" id="iteration-count" min="1" value="1"> <!-- Default 1 -->
+
+            <br/>
+            <button id="apply-animation">Apply Animation</button>
+            <button id="reverse-animation">Reverse Animation</button>
+            <button id="reset-animation">Reset Animation</button>
+        </div>
+
+    </div>
+</div>
+<script src="scripts/main.js"></script>
+<script src="scripts/animations.js"></script>
+</body>
+</html>
