@@ -1,0 +1,97 @@
+#content {
+    text-align: center;
+}
+
+.animation-box {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+label, select, input, button {
+    margin: 10px;
+    padding: 5px;
+}
+
+/* Animation Keyframes */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes zoom-in {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes flip-horizontal {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+}
+
+@keyframes flip-vertical {
+    from { transform: rotateX(0); }
+    to { transform: rotateX(360deg); }
+}
+
+/* ... Additional keyframes for other animations like expand, contract, tilt, etc. */
+
+/* Utility Classes for Each Animation */
+.bounce { animation: bounce 1s ease-in-out infinite; }
+.shake { animation: shake 0.5s linear infinite; }
+.fade-in { animation: fade-in 1s ease-out; }
+.slide-in-left { animation: slide-in-left 0.5s ease-out; }
+.slide-in-right { animation: slide-in-right 0.5s ease-out; }
+.zoom-in { animation: zoom-in 0.5s ease-in; }
+.spin { animation: spin 2s linear infinite; }
+.flip-horizontal { animation: flip-horizontal 2s linear; }
+.flip-vertical { animation: flip-vertical 2s linear; }
+
+/* ... Additional utility classes for other animations */
+
+/* Responsive and Interactive Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    /* For users who prefer reduced motion */
+    .bounce, .shake, .spin, .flip-horizontal, .flip-vertical {
+        animation: none;
+    }
+}
+
+/* Hover animations (if needed) */
+.bounce:hover, .shake:hover, .spin:hover {
+    animation-play-state: running;
+}
