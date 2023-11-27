@@ -1,0 +1,77 @@
+.container{
+    background-color: rgba(128, 128, 128, 0.24);
+    width: 70vw;
+    height: 65vh;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.box1{
+    background-color: rgba(0, 0, 255, 0.596);
+    border: 1px dashed black ;
+    outline: none;
+    margin: auto;
+    width: 30vw;
+    height: 100px;
+    position: relative;
+    top: 50px;
+    left: 0;
+    z-index: 1;
+    border-radius: 10px;
+}
+.box2{
+    background-color: rgba(255, 0, 0, 0.712);
+    outline: none;
+    border: 1px dashed black ;
+    width: 40vw;
+    height: 100px;
+    position: relative;
+    top: 20px;
+    left: 42px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.box3{
+    background-color: rgba(255, 255, 0, 0.699);
+    outline: none;
+    border: 1px dashed black ;
+    width: 44vw;
+    height: 100px;
+    position: relative;
+    top: 2px;
+    left: 30px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.box4{
+    background-color: rgba(128, 0, 128, 0.822);
+    outline: none;
+    border: 1px dashed black ;
+    width: 50vw;
+    height: 100px;
+    position: relative;
+    top: -30px;
+    left: 80px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+
+.controls{
+    width:70vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+label{
+    padding: 2px;
+}
+select{
+    margin-right: 10px;
+    padding: 3px;
+}
