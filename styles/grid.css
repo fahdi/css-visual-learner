@@ -23,7 +23,13 @@
 .controls {
     margin-bottom: 10px;
 }
-
+.controls input{
+    margin: 0px 5px;
+    border-radius: 5px;
+    width: 15%;
+    padding: 5px 5px;
+    border: 1px solid #000;
+}
 
 .controls select {
     cursor: pointer;
@@ -37,4 +43,22 @@
 
 .controls select:active {
     border: 1px solid blue;
+}
+#liveCssDisplayer{
+    margin: 15px 0px;
+}
+#csscode{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 5px 5px;
+    align-items: center;
+    height: max-content;
+    margin: 5px 5px;
+}
+#csscode p{
+    width: 65%;
+}
+#csscode button{
+    padding: 5px 5px;
 }
