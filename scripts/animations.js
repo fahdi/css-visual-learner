@@ -1,15 +1,11 @@
 // document onload event
 document.addEventListener('DOMContentLoaded', function(){
-  if (window.location.pathname !== '/animations.html') {
-    return;
-  }
 
   console.log('animations.js loaded');
 
   const applyAnimation = document.getElementById('apply-animation');
   if (applyAnimation) {
-
-    applyAnimation.addEventListener('click', function(){
+    applyAnimation.addEventListener('click', ()=>{
       let animationBox = document.querySelector('.animation-box');
       animationBox.style.backgroundColor = getRandomColor();
       let animationName = document.getElementById('animation-name').value;
