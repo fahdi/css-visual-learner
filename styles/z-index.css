@@ -1,0 +1,104 @@
+.container{
+    background-color: rgba(128, 128, 128, 0.24);
+    width: 70vw;
+    height: 400px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.box1{
+    background-color:rgba(0, 0, 255, 0.637);
+    outline: none;
+    border: 1px dashed black ;
+    width:250px;
+    height: 100px;
+    position: relative;
+    top: 70px;
+    left: 30px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.box2{
+    background-color: rgba(255, 0, 0, 0.925);
+    outline: none;
+    border: 1px dashed black ;
+    width:200px;
+    height: 100px;
+    position: relative;
+    top: 35px;
+    left: 42px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.box3{
+    background-color: rgba(255, 255, 0, 0.699);
+    outline: none;
+    border: 1px dashed black ;
+    width: 180px;
+    height: 100px;
+    position: relative;
+    top: 2px;
+    left: 30px;
+    border-radius: 10px;
+    z-index: 1;
+}
+.box4{
+    background-color:rgba(128, 0, 128, 0.918);
+    outline: none;
+    border: 1px dashed black ;
+    width: 205px;
+    height: 100px;
+    position: relative;
+    top: -30px;
+    left: 80px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+
+.controls{
+    width:70vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+label{
+    padding: 2px;
+}
+select{
+    margin-right: 10px;
+    padding: 3px;
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    .container {
+        width: 50vw;
+        left: 40px;
+    }
+ 
+    .box1{
+        position: absolute;
+        top: 190px;
+        height: 370px;
+        left: 500px;
+    }
+    .box2{
+        width:310px;
+        left: 120px;
+    }
+    .box3{
+        width: 270px;
+        left: 130px;
+    }
+    .box4{
+        width: 300px;
+        left: 150px;
+    }
+}
