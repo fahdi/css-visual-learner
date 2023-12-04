@@ -33,6 +33,10 @@
     <!-- Grid visualizer -->
     <div id="gridVisualizer">
       <div class="controls">
+        <label for="numberOfDivsInVisualizer">No of Elements in Visualizer</label>
+        <input type="number" name="numberOfDivsInVisualizer" id="" min="0" max="15">
+      </div>
+      <div class="controls">
         <label for="gridTemplateColumns">Grid Template Columns:</label>
         <select id="gridTemplateColumns">
           <option value="" hidden selected>Select a value</option>
@@ -96,6 +100,13 @@
           <div class="grid-item">4</div>
           <!-- More grid items as needed -->
         </div>
+      </div>
+    </div>
+    <div id="live-css-displayer">
+      <h3>CSS Code</h3>
+      <div id="css-code">
+        <p>Code will be here</p>
+        <button>Copy CSS Code</button>
       </div>
     </div>
 </div>

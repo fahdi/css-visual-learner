@@ -16,7 +16,7 @@
     text-align: center;
     background-color: #00d2ff; /* Item background */
     color: black; /* Item text color */
-    border-radius: 5px; /* Container border radius */
+    border-radius: 5px; /* Item border radius */
 }
 
 /* Additional styling for controls */
@@ -24,6 +24,13 @@
     margin-bottom: 10px;
 }
 
+.controls input {
+    margin: 0px 5px;
+    border-radius: 5px;
+    width: 15%;
+    padding: 5px 5px;
+    border: 1px solid #000;
+}
 
 .controls select {
     cursor: pointer;
@@ -34,7 +41,28 @@
     outline: none;
 }
 
-
 .controls select:active {
     border: 1px solid blue;
+}
+
+#live-css-displayer {
+    margin: 15px 0px;
+}
+
+#css-code {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    padding: 5px 5px;
+    align-items: center;
+    height: max-content;
+    margin: 5px 5px;
+}
+
+#css-code p {
+    width: 65%;
+}
+
+#css-code button {
+    padding: 5px 5px;
 }
