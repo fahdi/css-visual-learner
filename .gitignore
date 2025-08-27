@@ -2,5 +2,8 @@
 deploy.py
 requirements.txt
 setup_env.sh
+.DS_Store
+check_server.py
 venv/
 .env
+deploy_caddy.py
