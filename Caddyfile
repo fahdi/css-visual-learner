@@ -1,53 +1,33 @@
-# Caddyfile for CSS Visual Learner
-# For deployment with src/ directory structure
-
-{
-    # Redirect old visualizer URLs to new locations with 301 (permanent redirect)
-    redir /animations.html /visualizers/animations.html 301
-    redir /color.html /visualizers/color.html 301
-    redir /css-box.html /visualizers/css-box.html 301
-    redir /flex-box.html /visualizers/flex-box.html 301
-    redir /flex-justify-content.html /visualizers/flex-justify-content.html 301
-    redir /grid.html /visualizers/grid.html 301
-    redir /grid-extended.html /visualizers/grid-extended.html 301
-    redir /nth-child.html /visualizers/nth-child.html 301
-    redir /selector-playground.html /visualizers/selector-playground.html 301
-    redir /z-index.html /visualizers/z-index.html 301
-
-    # Serve static files from src directory
-    file_server {
-        root src
-    }
-
-    # Add compression for better performance
-    encode gzip
-
-    # Add security headers
-    header {
-        X-Content-Type-Options nosniff
-        X-Frame-Options DENY
-        X-XSS-Protection "1; mode=block"
-    }
-
-    # Cache control headers for different file types
-    @css {
-        path *.css
-    }
-    header @css {
-        Cache-Control "public, max-age=3600, must-revalidate"
-    }
-
-    @js {
-        path *.js
-    }
-    header @js {
-        Cache-Control "public, max-age=3600, must-revalidate"
-    }
-
-    @html {
-        path *.html
-    }
-    header @html {
-        Cache-Control "public, max-age=300, must-revalidate"
+fahdmurtaza.com {
+    # Handle CSS Visual Learner subfolder
+    handle_path /css-visual-learner/* {
+        # Redirect old URLs to new structure
+        redir /animations.html /css-visual-learner/visualizers/animations.html 301
+        redir /color.html /css-visual-learner/visualizers/color.html 301
+        redir /css-box.html /css-visual-learner/visualizers/css-box.html 301
+        redir /flex-box.html /css-visual-learner/visualizers/flex-box.html 301
+        redir /flex-justify-content.html /css-visual-learner/visualizers/flex-justify-content.html 301
+        redir /grid.html /css-visual-learner/visualizers/grid.html 301
+        redir /grid-extended.html /css-visual-learner/visualizers/grid-extended.html 301
+        redir /nth-child.html /css-visual-learner/visualizers/nth-child.html 301
+        redir /selector-playground.html /css-visual-learner/visualizers/selector-playground.html 301
+        redir /z-index.html /css-visual-learner/visualizers/z-index.html 301
+        redir /css-variables.html /css-visual-learner/visualizers/css-variables.html 301
+        redir /css-functions.html /css-visual-learner/visualizers/css-functions.html 301
+        
+        # Redirect root path to main entry point
+        redir /css-visual-learner /css-visual-learner/index.html 301
+        
+        # Serve files from css-visual-learner directory
+        root * /home/fahdmurtaza.com/css-visual-learner
+        file_server
+        encode gzip
+        
+        # Security headers
+        header {
+            X-Content-Type-Options nosniff
+            X-Frame-Options SAMEORIGIN
+            X-XSS-Protection "1; mode=block"
+        }
     }
 }

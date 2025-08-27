@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Functions - CSS Visual Learner</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/css-functions.css">
+
+    <!-- Standard Meta Tags -->
+    <meta name="description" content="Interactive tool to learn CSS Functions (calc, min, max, clamp) with real-time visual feedback.">
+    <meta name="keywords" content="CSS, CSS Functions, calc, min, max, clamp, Web Design, Learning Tool">
+    <meta name="author" content="Fahdi">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://fahdmurtaza.com/css-visual-learner/visualizers/css-functions.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CSS Functions - CSS Visual Learner">
+    <meta property="og:description" content="Interactive tool to learn CSS Functions with real-time visual feedback.">
+    <meta property="og:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS Functions - CSS Visual Learner">
+    <meta name="twitter:description" content="Interactive tool to learn CSS Functions with real-time visual feedback.">
+    <meta name="twitter:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
+    <meta name="twitter:creator" content="@fahdi">
+</head>
+<body>
+
+<header style="text-align: center">
+    <button class="hamburger-menu" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>    
+    <a href="../index.html" class="logo-link">
+        <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#FFF"/>
+            <text x="4" y="27" font-family="Arial" font-size="25" fill="#333">{ &nbsp; &nbsp;}</text>
+            <text x="14" y="25" font-family="Arial" font-size="12" font-weight="700" fill="#333">CSS</text>
+            <text x="52" y="25" font-family="Arial" font-size="10" font-weight="500" fill="#333">VISUAL LEARNER</text>
+        </svg>
+    </a>
+</header>
+
+<div id="sidebar"></div>
+
+<div id="content">
+    <h1>CSS Functions</h1>
+    <p>Explore calc(), min(), max(), and clamp() functions that enable mathematical operations in CSS.</p>
+    
+    <div id="css-rule-display">
+        <pre>Hover over the elements below to see CSS functions in action!</pre>
+    </div>
+
+    <div class="controls">
+        <div class="control-group">
+            <label for="base-size">Base Size:</label>
+            <input type="range" id="base-size" min="10" max="100" value="50">
+            <span id="base-size-value">50px</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="viewport-factor">Viewport Factor:</label>
+            <input type="range" id="viewport-factor" min="1" max="10" value="5" step="0.1">
+            <span id="viewport-factor-value">5vw</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="multiplier">Multiplier:</label>
+            <input type="range" id="multiplier" min="0.5" max="3" value="1.5" step="0.1">
+            <span id="multiplier-value">1.5</span>
+        </div>
+    </div>
+
+    <div class="function-sections">
+        <section class="function-section">
+            <h2>calc() Function</h2>
+            <div class="interactive-elements">
+                <div class="function-element calc-addition" data-function="calc">
+                    Addition: calc(50px + 2rem)
+                </div>
+                <div class="function-element calc-subtraction" data-function="calc">
+                    Subtraction: calc(100% - 30px)
+                </div>
+                <div class="function-element calc-multiplication" data-function="calc">
+                    Multiplication: calc(1rem * 2.5)
+                </div>
+                <div class="function-element calc-division" data-function="calc">
+                    Division: calc(100vw / 4)
+                </div>
+                <div class="function-element calc-complex" data-function="calc">
+                    Complex: calc((100% - 40px) / 3 + 10px)
+                </div>
+            </div>
+        </section>
+
+        <section class="function-section">
+            <h2>min() Function</h2>
+            <div class="interactive-elements">
+                <div class="function-element min-basic" data-function="min">
+                    Basic: min(300px, 50vw)
+                </div>
+                <div class="function-element min-multiple" data-function="min">
+                    Multiple: min(200px, 30vw, 50%)
+                </div>
+                <div class="function-element min-with-calc" data-function="min">
+                    With calc: min(calc(100% - 20px), 400px)
+                </div>
+                <div class="function-element min-responsive" data-function="min">
+                    Responsive: min(80vw, 600px)
+                </div>
+            </div>
+        </section>
+
+        <section class="function-section">
+            <h2>max() Function</h2>
+            <div class="interactive-elements">
+                <div class="function-element max-basic" data-function="max">
+                    Basic: max(200px, 20vw)
+                </div>
+                <div class="function-element max-multiple" data-function="max">
+                    Multiple: max(100px, 10vw, 25%)
+                </div>
+                <div class="function-element max-with-calc" data-function="max">
+                    With calc: max(calc(50% + 10px), 150px)
+                </div>
+                <div class="function-element max-responsive" data-function="max">
+                    Responsive: max(50vw, 300px)
+                </div>
+            </div>
+        </section>
+
+        <section class="function-section">
+            <h2>clamp() Function</h2>
+            <div class="interactive-elements">
+                <div class="function-element clamp-basic" data-function="clamp">
+                    Basic: clamp(100px, 25vw, 300px)
+                </div>
+                <div class="function-element clamp-font" data-function="clamp">
+                    Font: clamp(1rem, 4vw, 2.5rem)
+                </div>
+                <div class="function-element clamp-with-calc" data-function="clamp">
+                    With calc: clamp(50px, calc(10vw + 1rem), 200px)
+                </div>
+                <div class="function-element clamp-complex" data-function="clamp">
+                    Complex: clamp(calc(100px + 1rem), 50vw, calc(500px - 2rem))
+                </div>
+                <div class="function-element clamp-spacing" data-function="clamp">
+                    Spacing: clamp(1rem, 5vw, 4rem)
+                </div>
+            </div>
+        </section>
+
+        <section class="function-section">
+            <h2>Combined Functions</h2>
+            <div class="interactive-elements">
+                <div class="function-element combined-1" data-function="combined">
+                    Nested: max(min(50vw, 400px), 200px)
+                </div>
+                <div class="function-element combined-2" data-function="combined">
+                    Complex: clamp(100px, calc(50vw - 2rem), max(300px, 25vw))
+                </div>
+                <div class="function-element combined-3" data-function="combined">
+                    Grid: repeat(auto-fit, minmax(min(250px, 100%), 1fr))
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="viewport-info">
+        <p><strong>Current Viewport:</strong> <span id="viewport-width"></span> × <span id="viewport-height"></span></p>
+        <p><em>Resize your browser window to see how viewport-relative units affect the calculations!</em></p>
+    </div>
+</div>
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/css-functions.js"></script>
+</body>
+</html>

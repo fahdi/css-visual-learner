@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables - CSS Visual Learner</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/css-variables.css">
+
+    <!-- Standard Meta Tags -->
+    <meta name="description" content="Interactive tool to learn CSS Variables and Custom Properties with real-time visual feedback.">
+    <meta name="keywords" content="CSS, CSS Variables, Custom Properties, Web Design, Learning Tool">
+    <meta name="author" content="Fahdi">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://fahdmurtaza.com/css-visual-learner/visualizers/css-variables.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CSS Variables - CSS Visual Learner">
+    <meta property="og:description" content="Interactive tool to learn CSS Variables and Custom Properties with real-time visual feedback.">
+    <meta property="og:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS Variables - CSS Visual Learner">
+    <meta name="twitter:description" content="Interactive tool to learn CSS Variables and Custom Properties with real-time visual feedback.">
+    <meta name="twitter:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
+    <meta name="twitter:creator" content="@fahdi">
+</head>
+<body>
+
+<header style="text-align: center">
+    <button class="hamburger-menu" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>    
+    <a href="../index.html" class="logo-link">
+        <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#FFF"/>
+            <text x="4" y="27" font-family="Arial" font-size="25" fill="#333">{ &nbsp; &nbsp;}</text>
+            <text x="14" y="25" font-family="Arial" font-size="12" font-weight="700" fill="#333">CSS</text>
+            <text x="52" y="25" font-family="Arial" font-size="10" font-weight="500" fill="#333">VISUAL LEARNER</text>
+        </svg>
+    </a>
+</header>
+
+<div id="sidebar"></div>
+
+<div id="content">
+    <h1>CSS Variables & Custom Properties</h1>
+    <p>Hover over elements to see how CSS custom properties can be used to create dynamic, reusable values.</p>
+    
+    <div id="css-rule-display">
+        <pre>Hover over the elements below to see CSS variables in action!</pre>
+    </div>
+
+    <div class="controls">
+        <label for="primary-color">Primary Color:</label>
+        <input type="color" id="primary-color" value="#3498db">
+        
+        <label for="secondary-color">Secondary Color:</label>
+        <input type="color" id="secondary-color" value="#e74c3c">
+        
+        <label for="spacing">Spacing (px):</label>
+        <input type="range" id="spacing" min="10" max="50" value="20">
+        <span id="spacing-value">20px</span>
+    </div>
+
+    <div class="interactive-elements">
+        <div class="variable-element" data-css="--primary-color">Primary Color Button</div>
+        <div class="variable-element" data-css="--secondary-color">Secondary Color Button</div>
+        <div class="variable-element theme-card" data-css="--primary-color, --spacing">Themed Card</div>
+        <div class="variable-element gradient-box" data-css="--primary-color, --secondary-color">Gradient Box</div>
+        <div class="variable-element animated-box" data-css="--primary-color">Animated Box</div>
+        <div class="variable-element shadow-box" data-css="--primary-color, --spacing">Shadow Box</div>
+        <div class="variable-element border-box" data-css="--secondary-color, --spacing">Border Box</div>
+        <div class="variable-element text-box" data-css="--primary-color, --secondary-color">Styled Text</div>
+        <div class="variable-element fallback-box" data-css="--undefined-var">Fallback Value</div>
+        <div class="variable-element calc-box" data-css="calc(--spacing * 2)">Calculated Value</div>
+        <div class="variable-element inherited-box" data-css="inherit variables">
+            <div class="child-element">Inherited Variables</div>
+        </div>
+        <div class="variable-element local-scope" data-css="local scope override">Local Scope Override</div>
+    </div>
+</div>
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/css-variables.js"></script>
+</body>
+</html>

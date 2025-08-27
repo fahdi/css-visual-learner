@@ -1,0 +1,250 @@
+/* CSS Variables Visualizer Styles */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --spacing: 20px;
+    --border-radius: 8px;
+    --transition-duration: 0.3s;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+}
+
+.controls label {
+    font-weight: 600;
+    color: #333;
+}
+
+.controls input[type="color"] {
+    border: none;
+    border-radius: var(--border-radius);
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.controls input[type="range"] {
+    width: 120px;
+}
+
+#spacing-value {
+    font-weight: 600;
+    color: var(--primary-color);
+    min-width: 40px;
+}
+
+/* Variable Element Base Styles */
+.variable-element {
+    padding: var(--spacing);
+    margin: 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all var(--transition-duration) ease;
+    background: white;
+    border: 2px solid #e1e8ed;
+    text-align: center;
+    font-weight: 600;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Primary Color Button */
+.variable-element[data-css*="--primary-color"]:first-child {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.variable-element[data-css*="--primary-color"]:first-child:hover {
+    background: color-mix(in srgb, var(--primary-color) 80%, black);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Secondary Color Button */
+.variable-element[data-css*="--secondary-color"]:nth-child(2) {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.variable-element[data-css*="--secondary-color"]:nth-child(2):hover {
+    background: color-mix(in srgb, var(--secondary-color) 80%, black);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* Themed Card */
+.theme-card {
+    background: white;
+    border: 3px solid var(--primary-color);
+    padding: calc(var(--spacing) * 1.5);
+}
+
+.theme-card:hover {
+    background: color-mix(in srgb, var(--primary-color) 10%, white);
+    box-shadow: 0 8px 25px color-mix(in srgb, var(--primary-color) 20%, transparent);
+    transform: scale(1.05);
+}
+
+/* Gradient Box */
+.gradient-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+}
+
+.gradient-box:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: rotate(2deg) scale(1.05);
+}
+
+/* Animated Box */
+.animated-box {
+    background: var(--primary-color);
+    color: white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 color-mix(in srgb, var(--primary-color) 70%, transparent); 
+    }
+    50% { 
+        box-shadow: 0 0 0 20px color-mix(in srgb, var(--primary-color) 0%, transparent); 
+    }
+}
+
+.animated-box:hover {
+    animation-play-state: paused;
+    transform: scale(1.1);
+}
+
+/* Shadow Box */
+.shadow-box {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--spacing) var(--spacing) 0 var(--primary-color);
+}
+
+.shadow-box:hover {
+    transform: translate(10px, 10px);
+    box-shadow: calc(var(--spacing) - 10px) calc(var(--spacing) - 10px) 0 var(--primary-color);
+}
+
+/* Border Box */
+.border-box {
+    background: white;
+    border: var(--spacing) solid var(--secondary-color);
+    border-style: dashed;
+}
+
+.border-box:hover {
+    border-style: solid;
+    border-width: calc(var(--spacing) / 2);
+    background: color-mix(in srgb, var(--secondary-color) 10%, white);
+}
+
+/* Text Box */
+.text-box {
+    background: white;
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
+    font-size: calc(var(--spacing) * 0.8);
+    text-shadow: 1px 1px 2px color-mix(in srgb, var(--secondary-color) 30%, transparent);
+}
+
+.text-box:hover {
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+    text-shadow: 2px 2px 4px color-mix(in srgb, var(--primary-color) 30%, transparent);
+}
+
+/* Fallback Value */
+.fallback-box {
+    background: color-mix(in srgb, var(--undefined-var, #95a5a6) 100%, transparent);
+    color: white;
+    border: 2px solid var(--undefined-var, #7f8c8d);
+}
+
+.fallback-box:hover {
+    background: var(--undefined-var, #7f8c8d);
+    transform: scale(1.05);
+}
+
+/* Calculated Value */
+.calc-box {
+    padding: calc(var(--spacing) * 2);
+    background: color-mix(in srgb, var(--primary-color) 20%, white);
+    border: calc(var(--spacing) / 4) solid var(--primary-color);
+}
+
+.calc-box:hover {
+    padding: calc(var(--spacing) * 1.5);
+    border-width: calc(var(--spacing) / 2);
+    background: color-mix(in srgb, var(--primary-color) 30%, white);
+}
+
+/* Inherited Variables */
+.inherited-box {
+    --inherited-color: var(--secondary-color);
+    background: color-mix(in srgb, var(--inherited-color) 20%, white);
+    border: 2px solid var(--inherited-color);
+    flex-direction: column;
+    gap: 10px;
+}
+
+.child-element {
+    background: var(--inherited-color);
+    color: white;
+    padding: 10px;
+    border-radius: calc(var(--border-radius) / 2);
+    font-size: 0.9em;
+}
+
+.inherited-box:hover {
+    --inherited-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Local Scope Override */
+.local-scope {
+    --primary-color: #9b59b6; /* Local override */
+    background: var(--primary-color);
+    color: white;
+    border: 3px solid var(--secondary-color);
+}
+
+.local-scope:hover {
+    --primary-color: #8e44ad; /* Darker shade */
+    transform: rotate(-2deg) scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .controls > * {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .variable-element {
+        margin: 5px 0;
+        min-height: 50px;
+    }
+}
