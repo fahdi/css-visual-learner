@@ -1,1 +1,4 @@
 .idea
+deploy.py
+requirements.txt
+setup_env.sh
