@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Visual Learner - Interactive Boxes</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Standard Meta Tags -->
+    <meta name="description" content="Interactive tool to learn CSS with real-time visual feedback on hover.">
+    <meta name="keywords" content="CSS, Web Design, Learning Tool, CSS Visualizer">
+    <meta name="author" content="Fahdi">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://github.com/fahdi/css-visual-learner">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CSS Visual Learner - Interactive Boxes">
+    <meta property="og:description" content="Interactive tool to learn CSS with real-time visual feedback.">
+    <meta property="og:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CSS Visual Learner - Interactive Boxes">
+    <meta name="twitter:description" content="Interactive tool to learn CSS with real-time visual feedback.">
+    <meta name="twitter:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
+    <meta name="twitter:creator" content="@fahdi">
+</head>
+<body>
+
+<header style="text-align: center">
+    <button class="hamburger-menu" onclick="toggleSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <a href="#" class="logo-link" onclick="goHome()">
+        <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#FFF"/>
+            <text x="4" y="27" font-family="Arial" font-size="25" fill="#333">{ &nbsp; &nbsp;}</text>
+            <text x="14" y="25" font-family="Arial" font-size="12" font-weight="700" fill="#333">CSS</text>
+            <text x="52" y="25" font-family="Arial" font-size="10" font-weight="500" fill="#333">VISUAL LEARNER</text>
+        </svg>
+    </a>
+</header>
+
+<div id="sidebar">
+
+</div>
+
+<div id="content">
+    <div id="css-rule-display">
+        <pre>Hover over the boxes below to see CSS effects!</pre>
+    </div>
+    <div class="interactive-elements">
+        <div class="interactive-element">Box 1 (Background Color)</div>
+        <div class="interactive-element">Box 2 (Border Radius)</div>
+        <div class="interactive-element">Box 3 (Box Shadow)</div>
+        <div class="interactive-element">Box 4 (Font Size & Color)</div>
+        <div class="interactive-element">Box 5 (Transform Scale)</div>
+        <div class="interactive-element">Box 6 (Transform Rotate)</div>
+        <div class="interactive-element">Box 7 (Transform Translate)</div>
+        <div class="interactive-element">Box 8 (Transform Skew)</div>
+        <div class="interactive-element">Box 9 (Transition)</div>
+        <div class="interactive-element">Box 10 (Animation)</div>
+        <div class="interactive-element">Box 11 (Keyframes)</div>
+        <div class="interactive-element">Box 12 (Flexbox)</div>
+    </div>
+</div>
+
+<script src="../scripts/main.js"></script>
+<script src="../scripts/index.js"></script>
+</body>
+</html>

@@ -25,7 +25,7 @@
     <meta name="twitter:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
     <meta name="twitter:creator" content="@fahdi">
 </head>
-<body>
+<body class="landing-page-body">
 
 <header style="text-align: center">
     <button class="hamburger-menu" onclick="toggleSidebar()">
@@ -49,92 +49,93 @@
 </div>
 
 <div id="content">
-    <div id="css-rule-display">
-        <pre>Hover over the  boxes below to see CSS effects!</pre>
-    </div>
-    <div class="interactive-elements">
-        <div class="interactive-element">Box 1 (Background Color)</div>
-        <div class="interactive-element">Box 2 (Border Radius)</div>
-        <div class="interactive-element">Box 3 (Box Shadow)</div>
-        <div class="interactive-element">Box 4 (Font Size & Color)</div>
-        <div class="interactive-element">Box 5 (Transform Scale)</div>
-        <div class="interactive-element">Box 6 (Transform Rotate)</div>
-        <div class="interactive-element">Box 7 (Transform Translate)</div>
-        <div class="interactive-element">Box 8 (Transform Skew)</div>
-        <div class="interactive-element">Box 9 (Transition)</div>
-        <div class="interactive-element">Box 10 (Animation)</div>
-        <div class="interactive-element">Box 11 (Keyframes)</div>
-        <div class="interactive-element">Box 12 (Flexbox)</div>
-        <!--
-        <div class="interactive-element">Box 13 (Grid)</div>
-        <div class="interactive-element">Box 14 (Pseudo-classes)</div>
-        <div class="interactive-element">Box 15 (Pseudo-elements)</div>
-        <div class="interactive-element">Box 16 (Media Queries)</div>
-        <div class="interactive-element">Box 17 (Variables)</div>
-        <div class="interactive-element">Box 18 (CSS Functions)</div>
-        <div class="interactive-element">Box 19 (CSS Units)</div>
-        <div class="interactive-element">Box 20 (CSS Selectors)</div>
-        <div class="interactive-element">Box 21 (CSS Combinators)</div>
-        <div class="interactive-element">Box 22 (CSS Specificity)</div>
-        <div class="interactive-element">Box 23 (CSS Cascade)</div>
-        <div class="interactive-element">Box 24 (CSS Inheritance)</div>
-        <div class="interactive-element">Box 25 (CSS Box Model)</div>
-        <div class="interactive-element">Box 26 (CSS Display)</div>
-        <div class="interactive-element">Box 27 (CSS Positioning)</div>
-        <div class="interactive-element">Box 28 (CSS Overflow)</div>
-        <div class="interactive-element">Box 29 (CSS Float)</div>
-        <div class="interactive-element">Box 30 (CSS Clear)</div>
-        <div class="interactive-element">Box 31 (CSS Visibility)</div>
-        <div class="interactive-element">Box 32 (CSS Opacity)</div>
-        <div class="interactive-element">Box 33 (CSS Filter)</div>
-        <div class="interactive-element">Box 34 (CSS Clip Path)</div>
-        <div class="interactive-element">Box 35 (CSS Masking)</div>
-        <div class="interactive-element">Box 36 (CSS Columns)</div>
-        <div class="interactive-element">Box 37 (CSS Breakpoints)</div>
-        <div class="interactive-element">Box 38 (CSS Vendor Prefixes)</div>
-        <div class="interactive-element">Box 39 (CSS @supports)</div>
-        <div class="interactive-element">Box 40 (CSS @media)</div>
-        <div class="interactive-element">Box 41 (CSS @keyframes)</div>
-        <div class="interactive-element">Box 42 (CSS @font-face)</div>
-        <div class="interactive-element">Box 43 (CSS @import)</div>
-        <div class="interactive-element">Box 44 (CSS @page)</div>
-        <div class="interactive-element">Box 45 (CSS @counter-style)</div>
-        <div class="interactive-element">Box 46 (CSS @namespace)</div>
-        <div class="interactive-element">Box 47 (CSS @document)</div>
-        <div class="interactive-element">Box 48 (CSS @viewport)</div>
-        <div class="interactive-element">Box 49 (CSS @font-feature-values)</div>
-        <div class="interactive-element">Box 50 (CSS @font-palette-values)</div>
-        <div class="interactive-element">Box 51 (CSS @swash)</div>
-        <div class="interactive-element">Box 52 (CSS @ornaments)</div>
-        <div class="interactive-element">Box 53 (CSS @annotation)</div>
-        <div class="interactive-element">Box 54 (CSS @stylistic)</div>
-        <div class="interactive-element">Box 55 (CSS @styleset)</div>
-        <div class="interactive-element">Box 56 (CSS @character-variant)</div>
-        <div class="interactive-element">Box 57 (CSS @language)</div>
-        <div class="interactive-element">Box 58 (CSS @page)</div>
-        <div class="interactive-element">Box 59 (CSS @viewport)</div>
-        <div class="interactive-element">Box 60 (CSS @counter-style)</div>
-        <div class="interactive-element">Box 61 (CSS @namespace)</div>
-        <div class="interactive-element">Box 62 (CSS @document)</div>
-        <div class="interactive-element">Box 63 (CSS @viewport)</div>
-        <div class="interactive-element">Box 64 (CSS @font-feature-values)</div>
-        <div class="interactive-element">Box 65 (CSS @font-palette-values)</div>
-        <div class="interactive-element">Box 66 (CSS @swash)</div>
-        <div class="interactive-element">Box 67 (CSS @ornaments)</div>
-        <div class="interactive-element">Box 68 (CSS @annotation)</div>
-        <div class="interactive-element">Box 69 (CSS @stylistic)</div>
-        <div class="interactive-element">Box 70 (CSS @styleset)</div>
-        <div class="interactive-element">Box 71 (CSS @character-variant)</div>
-        <div class="interactive-element">Box 72 (CSS @language)</div>
-        <div class="interactive-element">Box 73 (CSS @page)</div>
-        <div class="interactive-element">Box 74 (CSS @viewport)</div>
-        <div class="interactive-element">Box 75 (CSS @counter-style)</div>
-        <div class="interactive-element">Box 76 (CSS @namespace)</div>
-        <div class="interactive-element">Box 77 (CSS @document)</div>
-        <div class="interactive-element">Box 78 (CSS @viewport)</div>
-        <div class="interactive-element">Box 79 (CSS @font-feature-values)</div>
-        <div class="interactive-element">Box 80 (CSS @font-palette-values)</div>-->
-    </div>
+    <main class="landing-page">
+        <section class="hero">
+            <h1>CSS Visual Learner</h1>
+            <p class="hero-subtitle">Master CSS through interactive visualizations</p>
+            <a href="visualizers/interactive-boxes.html" class="cta-button">Start Learning</a>
+        </section>
+
+        <section class="visualizers-grid">
+            <h2>Explore CSS Concepts</h2>
+            <div class="visualizer-cards">
+                
+                <a href="visualizers/interactive-boxes.html" class="visualizer-card">
+                    <h3>Interactive Boxes</h3>
+                    <p>Hover effects, transforms, and animations</p>
+                </a>
+
+                <a href="visualizers/css-box.html" class="visualizer-card">
+                    <h3>Box Model</h3>
+                    <p>Margin, border, padding, and box-sizing</p>
+                </a>
+
+                <a href="visualizers/flex-box.html" class="visualizer-card">
+                    <h3>Flexbox</h3>
+                    <p>Flexible layouts and alignment</p>
+                </a>
+
+                <a href="visualizers/flex-justify-content.html" class="visualizer-card">
+                    <h3>Justify Content</h3>
+                    <p>Flexbox content alignment</p>
+                </a>
+
+                <a href="visualizers/grid.html" class="visualizer-card">
+                    <h3>CSS Grid</h3>
+                    <p>Two-dimensional layouts</p>
+                </a>
+
+                <a href="visualizers/grid-extended.html" class="visualizer-card">
+                    <h3>Grid Extended</h3>
+                    <p>Advanced grid techniques</p>
+                </a>
+
+                <a href="visualizers/animations.html" class="visualizer-card">
+                    <h3>Animations</h3>
+                    <p>Keyframes and transitions</p>
+                </a>
+
+                <a href="visualizers/color.html" class="visualizer-card">
+                    <h3>Colors</h3>
+                    <p>Color manipulation and gradients</p>
+                </a>
+
+                <a href="visualizers/z-index.html" class="visualizer-card">
+                    <h3>Z-Index</h3>
+                    <p>Stacking contexts and layering</p>
+                </a>
+
+                <a href="visualizers/nth-child.html" class="visualizer-card">
+                    <h3>Nth-Child</h3>
+                    <p>Advanced selectors</p>
+                </a>
+
+                <a href="visualizers/selector-playground.html" class="visualizer-card">
+                    <h3>Selector Playground</h3>
+                    <p>Test and experiment with CSS selectors</p>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Why CSS Visual Learner?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Interactive Learning</h3>
+                    <p>Learn by doing with real-time visual feedback</p>
+                </div>
+                <div class="feature">
+                    <h3>Mobile Friendly</h3>
+                    <p>Works seamlessly on all devices</p>
+                </div>
+                <div class="feature">
+                    <h3>No Setup Required</h3>
+                    <p>Open and start learning immediately</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </div>
 
 <script src="scripts/main.js"></script>

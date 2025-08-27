@@ -274,3 +274,225 @@ header {
 .logo-link:active {
     transform: scale(0.98);
 }
+
+/* Landing Page Styles - Mobile First */
+
+/* Override the default #content margins for landing page */
+.landing-page-body #content {
+    margin: 0;
+    padding: 0;
+}
+
+.landing-page {
+    padding: 1rem;
+}
+
+/* Hero Section - Mobile */
+.hero {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem 0;
+}
+
+.hero h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #4299e1;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background: #3182ce;
+}
+
+/* Visualizers Grid - Mobile */
+.visualizers-grid {
+    margin-bottom: 2rem;
+}
+
+.visualizers-grid h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.visualizer-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.visualizer-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.visualizer-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #4299e1;
+}
+
+.visualizer-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.visualizer-card p {
+    color: #4a5568;
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Features Section - Mobile */
+.features {
+    background: #f7fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.features h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature h3 {
+    font-size: 1.125rem;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.feature p {
+    color: #4a5568;
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+/* Tablet Styles */
+@media (min-width: 640px) {
+    .landing-page {
+        padding: 1.5rem;
+    }
+    
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+    }
+    
+    .visualizer-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .landing-page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+    
+    .hero {
+        padding: 4rem 0;
+        margin-bottom: 4rem;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .visualizers-grid {
+        margin-bottom: 4rem;
+    }
+    
+    .visualizers-grid h2 {
+        font-size: 2rem;
+    }
+    
+    .visualizer-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+    
+    .visualizer-card {
+        padding: 2rem;
+    }
+    
+    .features {
+        padding: 3rem;
+        border-radius: 12px;
+    }
+    
+    .features h2 {
+        font-size: 2rem;
+    }
+}
