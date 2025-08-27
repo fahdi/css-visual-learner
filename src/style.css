@@ -260,3 +260,17 @@ ul.selector-visualizer {
 header {
     margin-top: 30px;
 }
+
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.05);
+}
+
+.logo-link:active {
+    transform: scale(0.98);
+}
