@@ -2,3 +2,5 @@
 deploy.py
 requirements.txt
 setup_env.sh
+venv/
+.env
