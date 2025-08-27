@@ -1,5 +1,25 @@
 /* Z-Index Visualizer Styles */
 
+/* Base Content Styles */
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#content p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
 :root {
     --primary-color: #3498db;
     --secondary-color: #e74c3c;
