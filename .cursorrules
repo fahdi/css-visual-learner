@@ -1,0 +1,39 @@
+# Cursor Rules for CSS Visual Learner
+
+## Project Context
+This is an interactive CSS learning tool built with vanilla HTML, CSS, and JavaScript. All source code is in the `src/` directory.
+
+## Code Style & Standards
+- Use vanilla JavaScript (no frameworks/libraries)
+- Follow existing naming conventions (kebab-case for files, camelCase for JS variables)
+- Maintain consistent indentation (2 spaces)
+- Keep code simple and educational-focused
+- Add comments only when complex logic needs explanation
+
+## File Organization
+- HTML files: `src/visualizers/` for interactive modules
+- JavaScript: `src/scripts/` with matching filenames
+- CSS: `src/styles/` with corresponding stylesheets
+- Assets: `src/assets/` for images and media
+- Entry point: `src/index.html`
+
+## Development Guidelines
+- Each visualizer follows the pattern: HTML + JS + CSS with matching names
+- Update `src/sidebar.html` navigation when adding new visualizers
+- Test interactivity and visual feedback for all changes
+- Ensure responsive design works on mobile devices
+- Maintain backward compatibility through Caddyfile redirects
+
+## Architecture Notes
+- `src/scripts/main.js` contains core utilities (getBaseURL, loadSidebar, etc.)
+- Dynamic sidebar loading via XHR
+- Path handling supports both local development and GitHub Pages
+- No build process required - pure client-side application
+
+## When Adding New Features
+1. Create visualizer HTML in `src/visualizers/`
+2. Add corresponding JS in `src/scripts/`
+3. Create matching CSS in `src/styles/`
+4. Update navigation in `src/sidebar.html`
+5. Add redirect rules to Caddyfiles if needed
+6. Follow existing interactive patterns for consistency

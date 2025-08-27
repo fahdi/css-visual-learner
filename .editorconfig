@@ -3,23 +3,16 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
-indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{html,css,js}]
 indent_style = space
-insert_final_newline = false
-max_line_length = 120
-tab_width = 4
-
-[*.scss]
 indent_size = 2
 
-[{*.cjs,*.js}]
-indent_size = 2
-tab_width = 2
+[*.md]
+trim_trailing_whitespace = false
 
-[*.html]
-indent_size = 4 # or your preferred indent size
-indent_style = space  # or your preferred indent style (space or tab)
-
-[*.css]
-indent_size = 4  # or your preferred indent size
-indent_style = space  # or your preferred indent style (space or tab)
+[Caddyfile*]
+indent_style = space
+indent_size = 4
