@@ -1,0 +1,30 @@
+# Caddyfile for CSS Visual Learner
+# For deployment with src/ directory structure
+
+# Redirect old visualizer URLs to new locations with 301 (permanent redirect)
+redir /animations.html /src/visualizers/animations.html 301
+redir /color.html /src/visualizers/color.html 301
+redir /css-box.html /src/visualizers/css-box.html 301
+redir /flex-box.html /src/visualizers/flex-box.html 301
+redir /flex-justify-content.html /src/visualizers/flex-justify-content.html 301
+redir /grid.html /src/visualizers/grid.html 301
+redir /grid-extended.html /src/visualizers/grid-extended.html 301
+redir /nth-child.html /src/visualizers/nth-child.html 301
+redir /selector-playground.html /src/visualizers/selector-playground.html 301
+redir /z-index.html /src/visualizers/z-index.html 301
+
+# Redirect root to main entry point
+redir / /src/index.html 301
+
+# Serve static files
+file_server
+
+# Add compression for better performance
+encode gzip
+
+# Add security headers
+header {
+    X-Content-Type-Options nosniff
+    X-Frame-Options DENY
+    X-XSS-Protection "1; mode=block"
+}

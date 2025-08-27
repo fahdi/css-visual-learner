@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Visual Learner - Flex Box</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/cssbox.css">
+    <title>CSS Visual Learner - CSS Selector Playground</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="styles/selector-playground.css">
+    <!-- In your HTML head, add the following lines -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script> <!-- For HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script> <!-- For CSS -->
+    <script src="../scripts/selector-playground.js"></script> <!-- Link to your JS file for this feature -->
 
     <!-- Standard Meta Tags -->
     <meta name="description" content="Interactive tool to learn CSS with real-time visual feedback on hover.">
@@ -50,39 +56,15 @@
 </div>
 
 <div id="content">
-    <div id="css-rule-display">
-        <pre>Tune your concepts using CSS Box Model!</pre>
-    </div>
-    <div class="container">
-        <form id="form">
-
-            <label for="margin">margin</label>
-            <input type="range" name="margin" min="0" max="50" value="30" data-unit="px" step="10">
-
-            <label for="border">border</label>
-            <input type="range" name="border" min="0" max="10" value="5" data-unit="px" step="5">
-
-            <label for="padding">padding</label>
-            <input type="range" name="padding" min="0" max="30" value="20" data-unit="px" step="10">
-
-            <label for="box-sizing">box-sizing</label>
-            <select name="box-sizing">
-                <option value="content-box">content-box</option>
-                <option value="border-box">border-box</option>
-            </select>
-
-        </form>
-
-        <div id="box-model">
-            <div id="wrapper">
-                <div id="box"></div>
-            </div>
-        </div>
-
+    <div id="selector-playground">
+        <textarea id="html-editor" class="editor"></textarea>
+        <textarea id="css-editor" class="editor"></textarea>
+        <div id="live-preview">Live Preview</div>
     </div>
 </div>
 
-<script src="scripts/main.js"></script>
-<script src="scripts/cssbox.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/index.js"></script>
 </body>
 </html>
+

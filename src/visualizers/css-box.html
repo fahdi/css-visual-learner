@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Visual Learner - nth-child</title>
-    <link rel="stylesheet" href="style.css">
+    <title>CSS Visual Learner - Flex Box</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="styles/cssbox.css">
 
     <!-- Standard Meta Tags -->
     <meta name="description" content="Interactive tool to learn CSS with real-time visual feedback on hover.">
@@ -24,6 +25,8 @@
     <meta name="twitter:description" content="Interactive tool to learn CSS with real-time visual feedback.">
     <meta name="twitter:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
     <meta name="twitter:creator" content="@fahdi">
+    <style>
+    </style>
 </head>
 <body>
 
@@ -47,59 +50,39 @@
 </div>
 
 <div id="content">
-    <div class="input-container">
-        <label for="nth-child-input">Enter :nth-child pattern:</label>
-        <input type="text" id="nth-child-input" placeholder="e.g., 2n+1">
+    <div id="css-rule-display">
+        <pre>Tune your concepts using CSS Box Model!</pre>
     </div>
+    <div class="container">
+        <form id="form">
 
-    <div>
-        <ul class="selector-visualizer">
-            <!-- Dynamically generate or manually place list items here -->
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-        </ul>
-    </div>
+            <label for="margin">margin</label>
+            <input type="range" name="margin" min="0" max="50" value="30" data-unit="px" step="10">
 
-    <div class="columns">
-        <div class="column rules">
-            <!-- List of nth-child rules -->
-            <div class="nth-rule" data-rule="1">:first-child</div>
-            <div class="nth-rule" data-rule="8">:last-child</div>
-            <div class="nth-rule" data-rule="1">:nth-child(1)</div>
-            <div class="nth-rule" data-rule="2">:nth-child(2)</div>
-            <div class="nth-rule" data-rule="3n">:nth-child(3n)</div>
-            <div class="nth-rule" data-rule="2n">:nth-child(2n)</div>
-            <div class="nth-rule" data-rule="odd">:nth-child(odd)</div>
-            <div class="nth-rule" data-rule="even">:nth-child(even)</div>
-            <div class="nth-rule" data-rule="n+4">:nth-child(n+4)</div>
-            <div class="nth-rule" data-rule="3n-1">:nth-child(3n-1)</div>
-            <div class="nth-rule" data-rule="-n+3">:nth-child(-n+3)</div>
-            <!-- Add more rules as needed -->
+            <label for="border">border</label>
+            <input type="range" name="border" min="0" max="10" value="5" data-unit="px" step="5">
+
+            <label for="padding">padding</label>
+            <input type="range" name="padding" min="0" max="30" value="20" data-unit="px" step="10">
+
+            <label for="box-sizing">box-sizing</label>
+            <select name="box-sizing">
+                <option value="content-box">content-box</option>
+                <option value="border-box">border-box</option>
+            </select>
+
+        </form>
+
+        <div id="box-model">
+            <div id="wrapper">
+                <div id="box"></div>
+            </div>
         </div>
-        <div class="column items">
-            <ul class="selector-visualizer">
-                <!-- List items -->
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8</li>
-            </ul>
-        </div>
+
     </div>
 </div>
 
-<script src="scripts/main.js"></script>
-<script src="scripts/nth-child.js"></script>
-
+<script src="../scripts/main.js"></script>
+<script src="../scripts/cssbox.js"></script>
 </body>
 </html>

@@ -23,15 +23,49 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/fahdi/css-visual-learner.git
+cd css-visual-learner
 ```
 
-Open `index.html` in your browser to start using the tool.
+**For Local Development:**
+Open `src/index.html` in your browser to start using the tool.
+
+**For Server Deployment:**
+Use the provided Caddyfile configurations for proper routing and redirects.
 
 ## How to Use
 
 1. Explore different CSS properties using the interactive visualizers.
 2. Use the responsive sidebar for easy navigation between different CSS concepts.
 3. Modify the CSS rules directly or use the controls provided in the visualizers to see the changes applied in real-time.
+
+## Server Deployment
+
+This project includes two Caddyfile configurations for different deployment scenarios:
+
+### Standalone Deployment (`Caddyfile`)
+For deploying as a standalone site:
+- Handles redirects from old URLs to new structure
+- Serves files directly from the project directory
+- Includes performance optimizations and security headers
+
+### Subfolder Deployment (`Caddyfile.subfolder`)
+For deploying as a subfolder on an existing site (e.g., `fahdmurtaza.com/css-visual-learner/`):
+- Template configuration for integration into your main Caddyfile
+- Handles path-based routing with `handle_path`
+- Maintains proper redirects for backward compatibility
+
+## Project Structure
+
+All source code is organized in the `src/` directory:
+- `src/index.html` - Main entry point
+- `src/visualizers/` - Interactive CSS learning modules
+- `src/scripts/` - JavaScript functionality
+- `src/styles/` - CSS stylesheets
+- `src/assets/` - Images and media files
+
+## Developer Information
+
+For detailed development guidelines and architecture information, see [CLAUDE.md](CLAUDE.md).
 
 ## Contributing
 

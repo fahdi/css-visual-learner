@@ -3,15 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Visual Learner - CSS Selector Playground</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/selector-playground.css">
-    <!-- In your HTML head, add the following lines -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/xml/xml.min.js"></script> <!-- For HTML -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/css/css.min.js"></script> <!-- For CSS -->
-    <script src="scripts/selector-playground.js"></script> <!-- Link to your JS file for this feature -->
+    <title>CSS Visual Learner</title>
+    <link rel="stylesheet" href="../style.css">
 
     <!-- Standard Meta Tags -->
     <meta name="description" content="Interactive tool to learn CSS with real-time visual feedback on hover.">
@@ -31,8 +24,6 @@
     <meta name="twitter:description" content="Interactive tool to learn CSS with real-time visual feedback.">
     <meta name="twitter:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
     <meta name="twitter:creator" content="@fahdi">
-    <style>
-    </style>
 </head>
 <body>
 
@@ -56,15 +47,25 @@
 </div>
 
 <div id="content">
-    <div id="selector-playground">
-        <textarea id="html-editor" class="editor"></textarea>
-        <textarea id="css-editor" class="editor"></textarea>
-        <div id="live-preview">Live Preview</div>
+    <div id="css-rule-display">
+        <pre>Hover over the boxes below to see CSS effects!</pre>
+    </div>
+    <div class="interactive-elements">
+        <div class="interactive-element">Green Text</div>
+        <div class="interactive-element">Blue Text</div>
+        <div class="interactive-element">Yellow Text</div>
+        <div class="interactive-element">Purple Text</div>
+        <div class="interactive-element">Orange Text</div>
+        <div class="interactive-element">Red Text</div>
+        <div class="interactive-element">Pink Text</div>
+        <div class="interactive-element">Hex Color Text</div>
+        <div class="interactive-element">Random Color Text</div>
+        <div class="interactive-element">Red Background/ White Text</div>
+        <div class="interactive-element">White Background/ Red Text</div>
     </div>
 </div>
 
-<script src="scripts/main.js"></script>
-<script src="scripts/index.js"></script>
+<script src="../scripts/main.js"></script>
+<script src="../scripts/colors.js"></script>
 </body>
 </html>
-
