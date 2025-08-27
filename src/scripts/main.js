@@ -98,12 +98,11 @@ function invertColor(hex){
 function padZero(str, len){
   len = len || 2;
   var zeros = new Array(len).join('0');
+  return (zeros + str).slice(-len);
 }
 
 function goHome(){
   // Navigate to home page using the same logic as sidebar links
   const baseURL = getBaseURL();
   window.location.href = baseURL + 'index.html';
-}
-  return (zeros + str).slice(-len);
 }
