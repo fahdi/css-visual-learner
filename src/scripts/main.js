@@ -1,10 +1,15 @@
 function getBaseURL(){
   // Check if running on GitHub Pages
   if (window.location.hostname === 'fahdi.github.io') {
-    return '/css-visual-learner/';
+    return '/css-visual-learner/src/';
   } else {
-    // Return an empty string if running locally or on a different host
-    return '';
+    // Check if we're in a subdirectory (visualizers)
+    if (window.location.pathname.includes('/visualizers/')) {
+      return '../';
+    } else {
+      // Return empty string if we're in the src root
+      return '';
+    }
   }
 }
 
@@ -13,11 +18,23 @@ function loadSidebar(){
   xhr.onreadystatechange = function(){
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById('sidebar').innerHTML = this.responseText;
+      // Fix sidebar links after loading
+      fixSidebarLinks();
     }
   };
   // Use the base URL to construct the correct path
   xhr.open('GET', getBaseURL() + 'sidebar.html', true);
   xhr.send();
+}
+
+function fixSidebarLinks(){
+  const baseURL = getBaseURL();
+  const sidebarLinks = document.querySelectorAll('#sidebar-links a[data-page]');
+  
+  sidebarLinks.forEach(function(link) {
+    const page = link.getAttribute('data-page');
+    link.href = baseURL + page;
+  });
 }
 
 // Load the sidebar when the page loads
