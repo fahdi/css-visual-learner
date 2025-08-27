@@ -1,5 +1,5 @@
 .idea
-deploy.py
+deploy*.py
 requirements.txt
 setup_env.sh
 .DS_Store
@@ -7,3 +7,5 @@ check_server.py
 venv/
 .env
 deploy_caddy.py
+__pycache__/
+test*.py
