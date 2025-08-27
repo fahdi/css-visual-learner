@@ -22,7 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
         spacingValue.textContent = `${value}px`;
     }
 
-    // Display CSS rules
+    // Helper function for smooth CSS display updates
+    function updateCSSDisplay(css) {
+        cssRuleDisplay.classList.add('updating');
+        setTimeout(() => {
+            cssRuleDisplay.innerHTML = `<pre>${css}</pre>`;
+            cssRuleDisplay.classList.remove('updating');
+        }, 100);
+    }
+
+    // Display CSS rules with smooth transition
     function displayCSSRule(element, variables) {
         const elementClass = element.className.split(' ').find(cls => cls !== 'variable-element') || 'element';
         
@@ -41,7 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         css += '}';
 
-        cssRuleDisplay.innerHTML = `<pre>${css}</pre>`;
+        // Add smooth transition effect
+        cssRuleDisplay.classList.add('updating');
+        setTimeout(() => {
+            cssRuleDisplay.innerHTML = `<pre>${css}</pre>`;
+            cssRuleDisplay.classList.remove('updating');
+        }, 100);
     }
 
     // Event listeners for controls
@@ -70,16 +84,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Special cases for different demonstrations
                 if (cssData.includes('inherit variables')) {
                     const css = `.inherited-box {\n    --inherited-color: var(--secondary-color);\n    background: color-mix(in srgb, var(--inherited-color) 20%, white);\n}\n\n.child-element {\n    background: var(--inherited-color); /* Inherits parent's value */\n    color: white;\n}`;
-                    cssRuleDisplay.innerHTML = `<pre>${css}</pre>`;
+                    updateCSSDisplay(css);
                 } else if (cssData.includes('local scope override')) {
                     const css = `.local-scope {\n    --primary-color: #9b59b6; /* Local override */\n    background: var(--primary-color);\n    /* This overrides the global --primary-color */\n}`;
-                    cssRuleDisplay.innerHTML = `<pre>${css}</pre>`;
+                    updateCSSDisplay(css);
                 } else if (cssData.includes('--undefined-var')) {
                     const css = `.fallback-box {\n    background: var(--undefined-var, #95a5a6);\n    /* Uses fallback value #95a5a6 when --undefined-var is not defined */\n    border: 2px solid var(--undefined-var, #7f8c8d);\n}`;
-                    cssRuleDisplay.innerHTML = `<pre>${css}</pre>`;
+                    updateCSSDisplay(css);
                 } else if (cssData.includes('calc(')) {
                     const css = `.calc-box {\n    padding: calc(var(--spacing) * 2);\n    border: calc(var(--spacing) / 4) solid var(--primary-color);\n    /* Mathematical operations with CSS variables */\n}`;
-                    cssRuleDisplay.innerHTML = `<pre>${css}</pre>`;
+                    updateCSSDisplay(css);
                 } else {
                     displayCSSRule(this, variables);
                 }
@@ -87,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         element.addEventListener('mouseleave', function() {
-            cssRuleDisplay.innerHTML = '<pre>Hover over the elements below to see CSS variables in action!</pre>';
+            updateCSSDisplay('Hover over the elements below to see CSS variables in action!');
         });
     });
 

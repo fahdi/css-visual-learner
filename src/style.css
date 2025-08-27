@@ -5,12 +5,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: left;
     padding: 0;
     margin: 0;
     font-size: 14px;
+    line-height: 1.6;
 }
 
 #sidebar {
@@ -41,18 +46,73 @@ body {
 }
 
 #css-rule-display {
-    padding: 10px;
-    border: 1px dashed grey;
-    background-color: #f4f4f4;
+    padding: 15px;
+    border: 1px solid #e1e8ed;
+    background-color: #f8f9fa;
     text-align: left;
-    min-height: 100px;
-    position: relative;
-    scroll-behavior: smooth;
-    width: calc(100% - 50px)
+    height: 150px; /* Fixed height to prevent jumping */
+    position: sticky;
+    top: 20px;
+    z-index: 100;
+    width: calc(100% - 30px);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    backdrop-filter: blur(10px);
+    background: rgba(248, 249, 250, 0.95);
 }
 
 .interactive-elements {
-    margin-top: 20px;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+/* Ensure content doesn't get hidden behind sticky elements */
+#content {
+    position: relative;
+}
+
+/* Improve pre formatting in css-rule-display */
+#css-rule-display pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #333;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#css-rule-display pre code {
+    background: none;
+    padding: 0;
+    border: none;
+}
+
+/* Add a subtle fade effect when content changes */
+#css-rule-display.updating pre {
+    opacity: 0.7;
+}
+
+/* Improve scrollbar styling for the CSS rule display */
+#css-rule-display::-webkit-scrollbar {
+    width: 6px;
+}
+
+#css-rule-display::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#css-rule-display::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+#css-rule-display::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
 }
 
 .interactive-element {
@@ -146,7 +206,11 @@ ul.selector-visualizer {
     }
 
     #css-rule-display {
-        width: inherit;
+        width: calc(100% - 20px);
+        height: 120px; /* Smaller on mobile */
+        top: 10px;
+        margin: 0 10px;
+        padding: 12px;
     }
 }
 

@@ -48,15 +48,18 @@
     margin: 10px;
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: all var(--transition-duration) ease;
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
     background: white;
     border: 2px solid #e1e8ed;
     text-align: center;
     font-weight: 600;
     min-height: 60px;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 /* Primary Color Button */

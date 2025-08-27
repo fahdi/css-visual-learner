@@ -74,12 +74,13 @@
     margin: 0.5rem 0;
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-width 0.3s ease;
     background: #ffffff;
     border: 2px solid #e1e8ed;
     text-align: center;
     font-weight: 500;
     min-height: 60px;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -254,7 +255,7 @@
 .function-element:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    border-width: 3px;
+    border-color: var(--primary-color);
 }
 
 /* Viewport Info */

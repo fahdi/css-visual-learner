@@ -30,6 +30,15 @@ document.addEventListener('DOMContentLoaded', function() {
         viewportHeight.textContent = window.innerHeight + 'px';
     }
 
+    // Helper function for smooth CSS display updates
+    function updateCSSDisplay(content) {
+        cssRuleDisplay.classList.add('updating');
+        setTimeout(() => {
+            cssRuleDisplay.innerHTML = `<pre>${content}</pre>`;
+            cssRuleDisplay.classList.remove('updating');
+        }, 100);
+    }
+
     // Display CSS rules based on function type and element
     function displayFunctionRule(element, functionType) {
         const elementClass = element.className.split(' ').find(cls => 
@@ -67,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         const fullCSS = `${explanation}\n.${elementClass} {\n${css}\n}`;
-        cssRuleDisplay.innerHTML = `<pre>${fullCSS}</pre>`;
+        updateCSSDisplay(fullCSS);
     }
 
     // Get specific CSS for each function element
@@ -172,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         element.addEventListener('mouseleave', function() {
-            cssRuleDisplay.innerHTML = '<pre>Hover over the elements below to see CSS functions in action!</pre>';
+            updateCSSDisplay('Hover over the elements below to see CSS functions in action!');
         });
 
         // Add click effect for mobile
