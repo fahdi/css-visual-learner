@@ -63,6 +63,22 @@ All source code is organized in the `src/` directory:
 - `src/styles/` - CSS stylesheets
 - `src/assets/` - Images and media files
 
+## Roadmap & Future Plans
+
+CSS Visual Learner is continuously evolving! See our comprehensive [TODO.md](TODO.md) for detailed roadmap including:
+
+- 🎯 **Phase 1 (Q1 2025)**: Performance optimization, mobile experience, accessibility improvements
+- 🎨 **Phase 2 (Q2 2025)**: Progressive learning paths, advanced visualizers, TypeScript migration  
+- 🌐 **Phase 3 (Q3 2025)**: Community features, user-generated content, platform integrations
+- 🔧 **Phase 4 (Q4 2025)**: AI-powered features, cutting-edge CSS support, enterprise tools
+
+### Immediate Priorities
+- [ ] Mobile touch interactions and responsive improvements
+- [ ] Accessibility compliance (WCAG 2.1 AA)
+- [ ] New visualizers: CSS Variables, Container Queries, Subgrid
+- [ ] Real-time code editor with syntax highlighting
+- [ ] Performance optimization and offline support
+
 ## Developer Information
 
 For detailed development guidelines and architecture information, see [CLAUDE.md](CLAUDE.md).

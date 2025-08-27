@@ -61,3 +61,34 @@ Each visualizer follows a consistent pattern:
 4. Add navigation link to `src/sidebar.html` with `visualizers/` prefix
 5. Update Caddyfile with redirect rules for backward compatibility
 6. Follow the established naming convention (kebab-case)
+
+## Development Priorities
+
+See [TODO.md](TODO.md) for comprehensive project roadmap. Current development priorities:
+
+### Immediate (High Priority)
+- **Accessibility**: Implement WCAG 2.1 AA compliance
+- **Mobile Experience**: Improve touch interactions and responsive design
+- **Performance**: Add lazy loading and optimize bundle sizes
+- **New Visualizers**: CSS Variables, Container Queries, Subgrid
+
+### Short Term (Medium Priority)
+- **Interactive Editor**: Real-time code editing with syntax highlighting
+- **Export Features**: CodePen/JSFiddle integration for sharing
+- **Testing**: Comprehensive test coverage with Jest + Playwright
+- **TypeScript Migration**: Gradual conversion for better maintainability
+
+### Code Quality Standards
+- Maintain vanilla JavaScript approach (no framework dependencies)
+- Prioritize educational value and visual clarity
+- Ensure all new features work on mobile devices
+- Follow progressive enhancement principles
+- Write self-documenting code with minimal comments
+- Test across major browsers (Chrome, Firefox, Safari, Edge)
+
+### Architecture Guidelines
+- Keep individual visualizers independent and modular
+- Use consistent patterns across all interactive elements
+- Maintain clean separation between HTML structure, CSS styling, and JS behavior
+- Optimize for fast initial load times
+- Plan for future features without over-engineering
