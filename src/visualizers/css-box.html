@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Visual Learner - Flex Box</title>
+    <title>CSS Box Model - CSS Visual Learner</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/cssbox.css">
 
     <!-- Standard Meta Tags -->
-    <meta name="description" content="Interactive tool to learn CSS with real-time visual feedback on hover.">
-    <meta name="keywords" content="CSS, Web Design, Learning Tool, CSS Visualizer">
+    <meta name="description" content="Interactive tool to learn CSS Box Model with real-time visual feedback.">
+    <meta name="keywords" content="CSS, Box Model, margin, padding, border, Web Design, Learning Tool">
     <meta name="author" content="Fahdi">
 
     <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://github.com/fahdi/css-visual-learner">
+    <meta property="og:url" content="https://fahdmurtaza.com/css-visual-learner/visualizers/css-box.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="CSS Visual Learner">
-    <meta property="og:description" content="Interactive tool to learn CSS with real-time visual feedback.">
+    <meta property="og:title" content="CSS Box Model - CSS Visual Learner">
+    <meta property="og:description" content="Interactive tool to learn CSS Box Model with real-time visual feedback.">
     <meta property="og:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CSS Visual Learner">
-    <meta name="twitter:description" content="Interactive tool to learn CSS with real-time visual feedback.">
+    <meta name="twitter:title" content="CSS Box Model - CSS Visual Learner">
+    <meta name="twitter:description" content="Interactive tool to learn CSS Box Model with real-time visual feedback.">
     <meta name="twitter:image" content="https://fahdi.github.io/css-visual-learner/thumbnails/css-visual-learner.jpg">
     <meta name="twitter:creator" content="@fahdi">
-    <style>
-    </style>
 </head>
 <body>
 
@@ -35,7 +33,8 @@
         <span></span>
         <span></span>
         <span></span>
-    </button>    <a href="../index.html" class="logo-link">
+    </button>    
+    <a href="../index.html" class="logo-link">
         <svg width="150" height="40" xmlns="http://www.w3.org/2000/svg">
             <rect width="100%" height="100%" fill="#FFF"/>
             <text x="4" y="27" font-family="Arial" font-size="25" fill="#333">{ &nbsp; &nbsp;}</text>
@@ -45,40 +44,144 @@
     </a>
 </header>
 
-<div id="sidebar">
-
-</div>
+<div id="sidebar"></div>
 
 <div id="content">
+    <h1>CSS Box Model</h1>
+    <p>Explore how margin, border, padding, and content work together to define the complete size and spacing of elements.</p>
+    
     <div id="css-rule-display">
-        <pre>Tune your concepts using CSS Box Model!</pre>
+        <pre>Adjust the controls below to see the CSS Box Model in action!</pre>
     </div>
-    <div class="container">
-        <form id="form">
 
-            <label for="margin">margin</label>
-            <input type="range" name="margin" min="0" max="50" value="30" data-unit="px" step="10">
-
-            <label for="border">border</label>
-            <input type="range" name="border" min="0" max="10" value="5" data-unit="px" step="5">
-
-            <label for="padding">padding</label>
-            <input type="range" name="padding" min="0" max="30" value="20" data-unit="px" step="10">
-
-            <label for="box-sizing">box-sizing</label>
-            <select name="box-sizing">
+    <div class="controls">
+        <div class="control-group">
+            <label for="margin-control">Margin:</label>
+            <input type="range" id="margin-control" min="0" max="50" value="20" step="5">
+            <span id="margin-value">20px</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="border-control">Border Width:</label>
+            <input type="range" id="border-control" min="0" max="20" value="5" step="1">
+            <span id="border-value">5px</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="padding-control">Padding:</label>
+            <input type="range" id="padding-control" min="0" max="50" value="15" step="5">
+            <span id="padding-value">15px</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="content-width">Content Width:</label>
+            <input type="range" id="content-width" min="100" max="400" value="200" step="10">
+            <span id="width-value">200px</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="content-height">Content Height:</label>
+            <input type="range" id="content-height" min="80" max="300" value="120" step="10">
+            <span id="height-value">120px</span>
+        </div>
+        
+        <div class="control-group">
+            <label for="box-sizing-control">Box Sizing:</label>
+            <select id="box-sizing-control">
                 <option value="content-box">content-box</option>
                 <option value="border-box">border-box</option>
             </select>
+        </div>
+    </div>
 
-        </form>
+    <div class="demo-sections">
+        <section class="demo-section">
+            <h2>Interactive Box Model</h2>
+            <div class="box-model-container">
+                <div class="box-model-wrapper" id="box-model-wrapper">
+                    <div class="margin-area" id="margin-area">
+                        <div class="margin-label">margin</div>
+                        <div class="border-area" id="border-area">
+                            <div class="border-label">border</div>
+                            <div class="padding-area" id="padding-area">
+                                <div class="padding-label">padding</div>
+                                <div class="content-area" id="content-area">
+                                    <div class="content-label">content</div>
+                                    <div class="dimensions-display">
+                                        <span id="content-dimensions">200×120</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div id="box-model">
-            <div id="wrapper">
-                <div id="box"></div>
+        <section class="demo-section">
+            <h2>Box Sizing Comparison</h2>
+            <div class="comparison-container">
+                <div class="comparison-box">
+                    <h3>content-box (default)</h3>
+                    <div class="comparison-demo content-box-demo">
+                        <div class="comparison-content">
+                            width: 200px<br>
+                            + padding<br>
+                            + border<br>
+                            = total width
+                        </div>
+                    </div>
+                    <p class="comparison-explanation">Width and height apply only to content area</p>
+                </div>
+                
+                <div class="comparison-box">
+                    <h3>border-box</h3>
+                    <div class="comparison-demo border-box-demo">
+                        <div class="comparison-content">
+                            width: 200px<br>
+                            includes padding<br>
+                            and border<br>
+                            = total width
+                        </div>
+                    </div>
+                    <p class="comparison-explanation">Width and height include padding and border</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="dimensions-info">
+        <h3>Calculated Dimensions:</h3>
+        <div class="dimensions-grid">
+            <div class="dimension-item">
+                <span class="dimension-label">Content Area:</span>
+                <span id="calc-content">200×120px</span>
+            </div>
+            <div class="dimension-item">
+                <span class="dimension-label">With Padding:</span>
+                <span id="calc-padding">230×150px</span>
+            </div>
+            <div class="dimension-item">
+                <span class="dimension-label">With Border:</span>
+                <span id="calc-border">240×160px</span>
+            </div>
+            <div class="dimension-item">
+                <span class="dimension-label">Total Size:</span>
+                <span id="calc-total">280×200px</span>
             </div>
         </div>
+    </div>
 
+    <div class="info-panel">
+        <h3>Key Concepts:</h3>
+        <ul>
+            <li><strong>Content:</strong> The inner area where text and images appear</li>
+            <li><strong>Padding:</strong> Clear space around the content, inside the border</li>
+            <li><strong>Border:</strong> A line that goes around the padding and content</li>
+            <li><strong>Margin:</strong> Clear space outside the border, separates the element from others</li>
+            <li><strong>content-box:</strong> Width/height apply to content only (default)</li>
+            <li><strong>border-box:</strong> Width/height include content, padding, and border</li>
+        </ul>
     </div>
 </div>
 

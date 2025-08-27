@@ -1,151 +1,425 @@
-#content {
-    background: var(--background-color);
+/* CSS Box Model Visualizer Styles */
 
+/* Base Content Styles */
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+#content h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#content p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
 }
 
 :root {
-    --background-color: rgb(255, 255, 255);
-    --content-color: rgba(45, 156, 219, 1);
-    --padding-color: rgba(148, 208, 242, 1);
-    --border-color: rgba(242, 153, 74, 1);
-    --margin-color: rgba(242, 242, 242, 1);
-
-    --margin: 30px;
-    --border: 5px;
-    --padding: 20px;
-    --box-sizing: content-box;
-
-    --height: 200px;
-    --width: 300px;
+    --primary-color: #3498db;
+    --secondary-color: #e74c3c;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --border-radius: 8px;
+    --transition-duration: 0.3s;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    
+    /* Box Model Colors */
+    --content-color: #3498db;
+    --padding-color: #27ae60;
+    --border-color: #f39c12;
+    --margin-color: #e74c3c;
 }
 
-
-#form {
-    width: 200px;
-    padding: 2rem 1rem;
+/* Controls */
+.controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
 }
 
-#form > * {
-    display: block;
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
 }
 
-#form label {
-    margin-top: 1.8rem;
-    margin-bottom: .6rem;
+.control-group label {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.9rem;
 }
 
-#form input[type=range] {
+.control-group input[type="range"] {
     width: 100%;
-    height: 5px;
-    background: darkgray;
-    outline: none;
+    max-width: 150px;
 }
 
-#form input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: black;
-    border: 1px solid gray;
+.control-group select {
+    padding: 0.5rem;
+    border: 1px solid #e1e8ed;
+    border-radius: 4px;
+    background: white;
+    color: #333;
+    font-weight: 500;
 }
 
-#form input[type=range]::-moz-range-thumb {
-    appearance: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background: black;
-    border: 1px solid gray;
+.control-group span {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    min-width: 60px;
+    text-align: center;
+    background: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e1e8ed;
 }
 
-#form input[name=padding]::-webkit-slider-thumb {
-    background: var(--padding-color);
+/* Demo Sections */
+.demo-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-#form input[name=padding]::-moz-range-thumb {
-    background: var(--padding-color);
+.demo-section {
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    box-shadow: var(--box-shadow);
 }
 
-#form input[name=border]::-webkit-slider-thumb {
-    background: var(--border-color);
+.demo-section h2 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
 }
 
-#form input[name=border]::-moz-range-thumb {
-    background: var(--border-color);
+/* Box Model Container */
+.box-model-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    overflow: auto;
 }
 
-#form input[name=margin]::-webkit-slider-thumb {
-    background: var(--margin-color);
-}
-
-#form input[name=margin]::-moz-range-thumb {
-    background: var(--margin-color);
-}
-
-#box-model {
+.box-model-wrapper {
     position: relative;
-    min-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#wrapper {
+/* Box Model Areas */
+.margin-area {
+    background: rgba(231, 76, 60, 0.3);
+    border: 2px dashed var(--margin-color);
+    padding: 20px;
+    position: relative;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-duration) ease;
+}
+
+.margin-label {
+    position: absolute;
+    top: -12px;
+    left: 8px;
     background: var(--margin-color);
-    display: inline-block;
-    padding: var(--margin); /* the "margin" */
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-#box {
-    box-sizing: var(--box-sizing);
-    height: var(--height);
-    width: var(--width);
-    padding: var(--padding);
-    border: solid orange;
-    border-width: var(--border);
+.border-area {
+    background: var(--border-color);
+    border: 5px solid var(--border-color);
+    position: relative;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-duration) ease;
 }
 
-#box {
-    /* method for coloring the padding, as seen at: https://stackoverflow.com/questions/14628601/can-i-add-background-color-only-for-padding*/
-    background-image: linear-gradient(var(--content-color), var(--content-color)),
-    linear-gradient(var(--padding-color), var(--padding-color));
-    background-clip: content-box, padding-box;
-}
-
-#box-model::before {
-    content: "height = 200px";
-    color: gray;
-    font-weight: 300;
+.border-label {
     position: absolute;
-    width: var(--height);
-    transform: rotate(-90deg);
-    text-align: center;
-    top: 48%;
-    right: -80px;
-    border-top: 1px solid gray;
-    padding-top: .5rem;
+    top: -12px;
+    right: 8px;
+    background: var(--border-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
-#box-model::after {
-    content: "width = 300px";
-    color: #aaaaaa;
-    font-weight: 300;
+.padding-area {
+    background: rgba(39, 174, 96, 0.3);
+    border: 2px dashed var(--success-color);
+    padding: 15px;
+    position: relative;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-duration) ease;
+}
+
+.padding-label {
     position: absolute;
-    width: var(--width);
+    bottom: -12px;
+    left: 8px;
+    background: var(--success-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.content-area {
+    background: var(--content-color);
+    color: white;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    position: relative;
+    transition: all var(--transition-duration) ease;
+}
+
+.content-label {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dimensions-display {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Box Sizing Comparison */
+.comparison-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.comparison-box {
     text-align: center;
-    bottom: 10px;
-    right: 25%;
-    border-top: 1px solid #AAAAAA;
-    padding-top: .5rem;
+}
+
+.comparison-box h3 {
+    margin: 0 0 1rem 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.comparison-demo {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius);
+    transition: transform var(--transition-duration) ease;
+    cursor: pointer;
+}
+
+.comparison-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow);
+}
+
+.content-box-demo {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid var(--border-color);
+    background: var(--content-color);
+    color: white;
+    box-sizing: content-box;
+}
+
+.border-box-demo {
+    width: 200px;
+    padding: 20px;
+    border: 5px solid var(--success-color);
+    background: var(--secondary-color);
+    color: white;
+    box-sizing: border-box;
+}
+
+.comparison-content {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.comparison-explanation {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Dimensions Info */
+.dimensions-info {
+    background: #e8f4fd;
+    border: 1px solid #b3d9ff;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.dimensions-info h3 {
+    margin: 0 0 1rem 0;
+    color: var(--primary-color);
+}
+
+.dimensions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.dimension-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.dimension-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.dimension-item span:last-child {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Info Panel */
+.info-panel {
+    background: #f0f8f0;
+    border: 1px solid #c8e6c9;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-panel h3 {
+    margin: 0 0 1rem 0;
+    color: var(--success-color);
+}
+
+.info-panel ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+.info-panel li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Interactive Hover Effects */
+.margin-area:hover {
+    background: rgba(231, 76, 60, 0.5);
+    transform: scale(1.02);
+}
+
+.padding-area:hover {
+    background: rgba(39, 174, 96, 0.5);
+    transform: scale(1.02);
+}
+
+.content-area:hover {
+    background: color-mix(in srgb, var(--content-color) 80%, white);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .controls {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .box-model-container {
+        min-height: 300px;
+        padding: 1rem;
+    }
+    
+    .margin-area {
+        padding: 15px;
+    }
+    
+    .padding-area {
+        padding: 10px;
+    }
+    
+    .content-area {
+        width: 150px;
+        height: 100px;
+    }
+    
+    .comparison-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .content-box-demo,
+    .border-box-demo {
+        width: 150px;
+        padding: 15px;
+        border-width: 3px;
+    }
+    
+    .dimensions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-area {
+        width: 120px;
+        height: 80px;
+        font-size: 0.8rem;
+    }
+    
+    .margin-area {
+        padding: 10px;
+    }
+    
+    .padding-area {
+        padding: 8px;
+    }
+    
+    .content-box-demo,
+    .border-box-demo {
+        width: 120px;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
 }
